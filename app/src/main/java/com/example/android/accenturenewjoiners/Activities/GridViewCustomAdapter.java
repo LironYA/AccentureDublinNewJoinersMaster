@@ -66,14 +66,14 @@ public class GridViewCustomAdapter extends BaseAdapter {
             public void onClick(View v) {
                 // TODO ??Possibly change to case?? an intent will open a new activity when clicked. Maybe use extra here
                 if(position == 0) {
-                    Intent intent= new Intent(context, AboutUsActivity.class);
+                    Intent intent= new Intent(context, Locations.class);
                     v.getContext().startActivity(intent);
                 }
                 if(position == 1) {
                     Intent intent= new Intent(context, PrivacyPolicyActivity.class);
                     v.getContext().startActivity(intent);
                 }
-                Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "You Clicked On "+result[position], Toast.LENGTH_SHORT).show();
             }
         });
 
