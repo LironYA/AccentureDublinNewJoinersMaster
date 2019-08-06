@@ -3,6 +3,7 @@
         <color name="black">#000000</color>
         <color name="signupColor">#066e8a</color>
         <color name="accentureBlue">#0091FF</color>
+        <color name="activityDivider">#0091FF</color>
         <color name="colorPrimary">#c72c2e</color>
         <color name="colorPrimaryDark">#c72c2e</color>
         <color name="colorAccent">#c72c2e</color>
@@ -10,5 +11,5 @@
         <color name="colorHeading">#FFFFFF</color>
         <color name="white">#FFFFFF</color>
         <color name="greyBG">#fbfbfa</color>
-
+        <color name="content">#D32F2F</color>
 </resources>

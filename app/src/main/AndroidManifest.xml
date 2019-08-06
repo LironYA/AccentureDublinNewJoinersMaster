@@ -42,6 +42,7 @@
 
         </activity>
         <activity android:name=".Activities.Locations" />
+        <activity android:name=".Activities.News" />
     </application>
 
 </manifest>

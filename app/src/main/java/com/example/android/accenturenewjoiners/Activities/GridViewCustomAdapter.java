@@ -73,6 +73,10 @@ public class GridViewCustomAdapter extends BaseAdapter {
                     Intent intent= new Intent(context, PrivacyPolicyActivity.class);
                     v.getContext().startActivity(intent);
                 }
+                if(position == 15) {
+                    Intent intent= new Intent(context, News.class);
+                    v.getContext().startActivity(intent);
+                }
                 Toast.makeText(context, "You Clicked On "+result[position], Toast.LENGTH_SHORT).show();
             }
         });
