@@ -42,7 +42,10 @@
 
         </activity>
         <activity android:name=".Activities.Locations" />
-        <activity android:name=".Activities.News" />
+        <activity android:name=".Activities.News"
+            android:label="News"
+            android:theme="@style/News"/>
+        <activity android:name=".Activities.SettingsActivity" />
     </application>
 
 </manifest>

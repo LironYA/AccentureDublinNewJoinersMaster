@@ -16,7 +16,7 @@
         android:drawSelectorOnTop="true"
         android:headerDividersEnabled="false"
         android:orientation="horizontal"
-        tools:context="com.example.android.finalfantasynewsapp.MainActivity" />
+        tools:context="com.example.android.accenturenewjoiners.Activities.PrivacyPolicyActivity" />
     <!-- Empty view is only visible when the list has no items. -->
     <TextView
         android:id="@+id/empty_view"

@@ -96,12 +96,15 @@ public class News extends AppCompatActivity implements LoaderManager.LoaderCallb
         // &to-date=2018-01-01&order-by=newest&use-date=published&q=%22final%20fantasy%22&api-key=c018038d-3e83-48f8-9208-c09dd8c08614
         // &show-tags=contributor&show-fields=thumbnail
 
-        uriBuilder.appendQueryParameter("section", "games");
-        uriBuilder.appendQueryParameter("from-date", "2018-01-01");
-        uriBuilder.appendQueryParameter("to-date", "2018-06-06");
+      // uriBuilder.appendQueryParameter("section", "News");
+       // uriBuilder.appendQueryParameter("from-date", "2019-05-01");
+       // uriBuilder.appendQueryParameter("to-date", "2019-08-08");
         uriBuilder.appendQueryParameter("order-by", order_by);
+        uriBuilder.appendQueryParameter("format", "json");
         uriBuilder.appendQueryParameter("use-date", "published");
+       // uriBuilder.appendQueryParameter("type", "article");
         uriBuilder.appendQueryParameter("q", query);
+        uriBuilder.appendQueryParameter("page-size", "50");
         uriBuilder.appendQueryParameter("api-key", "c018038d-3e83-48f8-9208-c09dd8c08614");
         uriBuilder.appendQueryParameter("show-tags", "contributor");
         uriBuilder.appendQueryParameter("show-fields", "thumbnail");

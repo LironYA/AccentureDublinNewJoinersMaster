@@ -73,7 +73,7 @@ public class QueryUtils {
                 Log.e("QueryUtils", "Error response code: " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e("QueryUtils", "Problem retrieving the earthquake JSON results.", e);
+            Log.e("QueryUtils", "Problem retrieving the JSON results.", e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -111,9 +111,9 @@ public class QueryUtils {
             // Extract the JSONArray associated with the key called "results",
             // which represents a list of news result
             JSONArray newsArray = response.getJSONArray("results");
-            // For each earthquake in the earthquakeArray, create an {@link Earthquake} object
+            // For each result, create an {@link Earthquake} object
             for (int i = 0; i < newsArray.length(); i++) {
-                // Get a single earthquake at position i within the list of earthquakes
+                // Get a single news at position i within the list of news
                 JSONObject currentNews = (JSONObject) newsArray.get(i);
                 // For a given entry, extract the JSONObject associated with the
                 // key called "results"
