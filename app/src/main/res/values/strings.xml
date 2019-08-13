@@ -35,12 +35,30 @@
     <string name="title_activity_about_us">About Us</string>
     <string name="title_activity_privacy_policy">PrivacyPolicyActivity</string>
 
-    <string name="Preferences_title">Settings</string>
+    <string name="Preferences_title">News Settings</string>
     <string name="settings_order_by_key" translatable="false">order_by</string>
     <string name="settings_order_by_newest_key">Newest</string>
     <string name="settings_order_by_newest_value">newest</string>
     <string name="settings_order_by_oldest_key">Oldest</string>
     <string name="settings_order_by_oldest_value">oldest</string>
+
+    <string name="settings_section_news_label">Choose sections</string>
+
+    <!--Sections -->
+    <string name="settings_section_news">News</string>
+    <string name="settings_section_news_value">news</string>
+    <string name="settings_section_food">Food</string>
+    <string name="settings_section_food_value">food</string>
+    <string name="settings_section_business">Business</string>
+    <string name="settings_section_business_value">business</string>
+    <string name="settings_section_sport">Sport</string>
+    <string name="settings_section_sport_value">sport</string>
+    <string name="settings_section_politics">Politics</string>
+    <string name="settings_section_politics_value">politics</string>
+    <string name="settings_section_society">Society</string>
+    <string name="settings_section_society_value">society</string>
+    <string name="settings_section_music">Music</string>
+    <string name="settings_section_music_value">music</string>
 
     <string name="settings_order_by_label">Order By</string>
     <string name="settings_order_by_default" translatable="false">@string/settings_order_by_value</string>
@@ -52,20 +70,44 @@
     <string name="settings_order_by_most_recent_label">Oldest</string>
     <string name="settings_order_by_most_recent_value" translatable="false">oldest</string>
     <!-- Query -->
-    <string name="settings_query_default" translatable="false">@string/settings_query_last_of_us_value</string>
-    <string name="settings_query_key">ireland</string>
-    <string name="setting_query_default_value">Ireland</string>
+    <string name="settings_query_key" translatable="false">ireland</string>
+    <string name="setting_query_default_value" translatable="false">Ireland</string>
     <string name="settings_query_label">Choose country news</string>
 
+    <!-- Section -->
+    <string name="settings_section_label_arrays">News</string>
+    <string name="settings_section_default" translatable="false">@string/setting_section_default_value</string>
+    <string name="settings_sections_key" translatable="false">world</string>
+    <string name="settings_sections_world_label" translatable="false">World News</string>
+
+    <string name="setting_section_default_value" translatable="false">world</string>
+    <string name="settings_section_label">Choose news section</string>
+
     <!--Label for country query -->
-    <string name="settings_query_label_uk">UK</string>
-    <string name="settings_query_russia">Russia</string>
-    <string name="settings_query_germany">Germany</string>
-    <string name="settings_query_portugal">Portugal</string>
+    <string name="settings_query_england" translatable="false">England</string>
+    <string name="settings_query_russia" translatable="false">Russia</string>
+    <string name="settings_query_germany" translatable="false">Germany</string>
+    <string name="settings_query_portugal" translatable="false">Portugal</string>
+    <string name="settings_query_romania" translatable="false">Romania</string>
+    <string name="settings_query_france" translatable="false">France</string>
+    <string name="settings_query_italy" translatable="false">Italy</string>
+    <string name="settings_query_canada" translatable="false">Canada</string>
+    <string name="settings_query_japan" translatable="false">Japan</string>
+    <string name="settings_query_poland" translatable="false">Poland</string>
+    <string name="settings_query_norway" translatable="false">Norway</string>
+    <string name="settings_query_greece" translatable="false">Greece</string>
 
     <!--Values for country query -->
-    <string name="settings_query_value_uk">uk</string>
-    <string name="settings_query_value_russia">russia</string>
-    <string name="settings_query_value_germany">Germany</string>
-    <string name="settings_query_value_portugal">portugal</string>
+    <string name="settings_query_value_england" translatable="false">England</string>
+    <string name="settings_query_value_russia" translatable="false">Russia</string>
+    <string name="settings_query_value_germany" translatable="false">Germany</string>
+    <string name="settings_query_value_portugal" translatable="false">Portugal</string>
+    <string name="settings_query_value_romania" translatable="false">Romania</string>
+    <string name="settings_query_value_france" translatable="false">France</string>
+    <string name="settings_query_value_italy" translatable="false">Italy</string>
+    <string name="settings_query_value_canada" translatable="false">Canada</string>
+    <string name="settings_query_value_japan" translatable="false">Japan</string>
+    <string name="settings_query_value_poland" translatable="false">Poland</string>
+    <string name="settings_query_value_norway" translatable="false">Norway</string>
+    <string name="settings_query_value_greece" translatable="false">Greece</string>
 </resources>

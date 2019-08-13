@@ -14,28 +14,38 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.accenturenewjoiners.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+//TO-DO: add floating button of more country news (intent)
 public class News extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<GetNews>>,
         SharedPreferences.OnSharedPreferenceChangeListener {
+
+
     private static final String COUNTRY_NEWS = "https://content.guardianapis.com/search";
     private ProgressBar progressBar;
     private int LOADER_ID = 1;
     // TextView that is displayed when the list is empty
     private TextView emptyStateTextView;
     private NewsAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_activity);
         ListView newsView = (ListView) findViewById(R.id.list);
+        final SharedPreferences sharedPrefsButton = PreferenceManager.getDefaultSharedPreferences(this);
+        final String initialButtonValue = sharedPrefsButton.getString(getString(R.string.settings_query_key),getString(R.string.setting_query_default_value));
+
         // Obtain a reference to the SharedPreferences file for this app
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         // And register to be notified of preference changes
@@ -78,14 +88,118 @@ public class News extends AppCompatActivity implements LoaderManager.LoaderCallb
                 startActivity(websiteIntent);
             }
         });
-    }
+        //Open local news sites
+        final Button localNewsButton = (Button) findViewById(R.id.button_local_news);
+       // localNewsButton.setText("Local news for " + initialButtonValue);
+
+        localNewsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String queryButton = sharedPrefsButton.getString(getString(R.string.settings_query_key),getString(R.string.setting_query_default_value));
+                //Open news site for England
+                if(queryButton.equals("England")) {
+                    String url = "https://www.mirror.co.uk";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Russia
+                if(queryButton.equals("Russia")) {
+                    String url = "https://www.themoscowtimes.com";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Germany
+                if(queryButton.equals("Germany")) {
+                    String url = "https://www.thelocal.de";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Portugal
+                if(queryButton.equals("Portugal")) {
+                    String url = "https://www.theportugalnews.com";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Romania
+                if(queryButton.equals("Romania")) {
+                    String url = "https://www.romania-insider.com";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Ireland
+                if(queryButton.equals("Ireland")) {
+                    String url = "https://www.breakingnews.ie";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for France
+                if(queryButton.equals("France")) {
+                    String url = "https://www.france24.com/en";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Italy
+                if(queryButton.equals("Italy")) {
+                    String url = "https://www.thelocal.it";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Canada
+                if(queryButton.equals("Canada")) {
+                    String url = "https://globalnews.ca/canada";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Japan
+                if(queryButton.equals("Japan")) {
+                    String url = "https://japantoday.com/";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Poland
+                if(queryButton.equals("Poland")) {
+                    String url = "https://www.tvn24.pl/tvn24-news-in-english,157,m";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Norway
+                if(queryButton.equals("Norway")) {
+                    String url = "https://www.thelocal.no";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                //Open news site for Greece
+                if(queryButton.equals("Greece")) {
+                    String url = "https://greece.greekreporter.com/category/greek-news";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+                Toast.makeText(getApplicationContext(), "Opening local country news for " + queryButton, Toast.LENGTH_LONG).show();
+//                localNewsButton.setText("Local news for " + queryButton);
+            }
+        });
+        }
+
     @Override
     public Loader<List<GetNews>> onCreateLoader(int i, Bundle bundle) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         // getString retrieves a String value from the preferences. The second parameter is the default value for this preference.
-        String order_by = sharedPrefs.getString(getString(R.string.settings_order_by_key),getString(R.string.settings_order_by_newest_value));
+     //   String order_by = sharedPrefs.getString(getString(R.string.settings_order_by_key),getString(R.string.settings_order_by_newest_value));
         String query = sharedPrefs.getString(getString(R.string.settings_query_key),getString(R.string.setting_query_default_value));
-
+        String section_news = sharedPrefs.getString(getString(R.string.settings_sections_key), getString(R.string.setting_section_default_value));
         // parse breaks apart the URI string that's passed into its parameter
         Uri baseUri = Uri.parse(COUNTRY_NEWS);
 
@@ -96,10 +210,10 @@ public class News extends AppCompatActivity implements LoaderManager.LoaderCallb
         // &to-date=2018-01-01&order-by=newest&use-date=published&q=%22final%20fantasy%22&api-key=c018038d-3e83-48f8-9208-c09dd8c08614
         // &show-tags=contributor&show-fields=thumbnail
 
-      // uriBuilder.appendQueryParameter("section", "News");
+        uriBuilder.appendQueryParameter("section", section_news);
        // uriBuilder.appendQueryParameter("from-date", "2019-05-01");
        // uriBuilder.appendQueryParameter("to-date", "2019-08-08");
-        uriBuilder.appendQueryParameter("order-by", order_by);
+        uriBuilder.appendQueryParameter("order-by", "newest");
         uriBuilder.appendQueryParameter("format", "json");
         uriBuilder.appendQueryParameter("use-date", "published");
        // uriBuilder.appendQueryParameter("type", "article");
@@ -113,7 +227,7 @@ public class News extends AppCompatActivity implements LoaderManager.LoaderCallb
     @Override
     public void onLoadFinished(Loader<List<GetNews>> loader, List<GetNews> news) {
         progressBar.setVisibility(View.GONE);
-        emptyStateTextView.setText("No news found, please try again later");
+        emptyStateTextView.setText("No news found, click on local news or try again later");
         adapter.clear();
 
         if (news != null && !news.isEmpty()) {
@@ -147,7 +261,7 @@ public class News extends AppCompatActivity implements LoaderManager.LoaderCallb
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-        if(key.equals(getString(R.string.settings_query_key)) || key.equals(getString(R.string.settings_order_by_key)))
+        if(key.equals(getString(R.string.settings_query_key)) || key.equals(getString(R.string.settings_sections_key)))
         {
             adapter.clear();
             // Hide the empty state text view as the loading indicator will be displayed

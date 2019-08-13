@@ -3,12 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp">
-
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/button_local_news"
+    android:layout_centerHorizontal="true"
+    android:text="Local news"
+    android:padding="15dp"/>
     <ListView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/list"
+        android:layout_below="@id/button_local_news"
         android:layout_width="match_parent"
-
         android:layout_height="match_parent"
         android:layout_marginBottom="5dp"
         android:divider="@color/activityDivider"

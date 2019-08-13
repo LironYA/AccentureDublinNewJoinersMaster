@@ -9,19 +9,60 @@
         <item>@string/settings_order_by_most_recent_value</item>
     </string-array>
 
-    <!-- Query -->
+    <!-- News Section -->
+    <string-array name="settings_section_labels">
+        <item>@string/settings_section_news</item>
+        <item>@string/settings_section_food</item>
+        <item>@string/settings_section_business</item>
+        <item>@string/settings_section_sport</item>
+        <item>@string/settings_section_politics</item>
+        <item>@string/settings_section_society</item>
+        <item>@string/settings_section_music</item>
+
+        <item>@string/settings_sections_world_label</item>
+
+    </string-array>
+    <string-array name="settings_section_values">
+        <item>@string/settings_section_news_value</item>
+        <item>@string/settings_section_food_value</item>
+        <item>@string/settings_section_business_value</item>
+        <item>@string/settings_section_sport_value</item>
+        <item>@string/settings_section_politics_value</item>
+        <item>@string/settings_section_society_value</item>
+        <item>@string/settings_section_music_value</item>
+
+        <item>@string/setting_section_default_value</item>
+
+    </string-array>
+    <!-- Country Query -->
     <string-array name="settings_query_labels">
-        <item>@string/settings_query_label_uk</item>
+        <item>@string/settings_query_england</item>
         <item>@string/settings_query_russia</item>
         <item>@string/settings_query_germany</item>
         <item>@string/settings_query_portugal</item>
+        <item>@string/settings_query_romania</item>
+        <item>@string/settings_query_france</item>
+        <item>@string/settings_query_italy</item>
+        <item>@string/settings_query_canada</item>
+        <item>@string/settings_query_japan</item>
+        <item>@string/settings_query_poland</item>
+        <item>@string/settings_query_norway</item>
+        <item>@string/settings_query_greece</item>
         <item>@string/setting_query_default_value</item>
     </string-array>
     <string-array name="settings_query_values">
-        <item>@string/settings_query_value_uk</item>
+        <item>@string/settings_query_value_england</item>
         <item>@string/settings_query_value_russia</item>
         <item>@string/settings_query_value_germany</item>
         <item>@string/settings_query_value_portugal</item>
+        <item>@string/settings_query_value_romania</item>
+        <item>@string/settings_query_value_france</item>
+        <item>@string/settings_query_value_italy</item>
+        <item>@string/settings_query_value_canada</item>
+        <item>@string/settings_query_value_japan</item>
+        <item>@string/settings_query_value_poland</item>
+        <item>@string/settings_query_value_norway</item>
+        <item>@string/settings_query_value_greece</item>
         <item>@string/setting_query_default_value</item>
     </string-array>
 </resources>
