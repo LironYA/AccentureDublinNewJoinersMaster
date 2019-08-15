@@ -46,6 +46,7 @@
             android:label="News"
             android:theme="@style/News"/>
         <activity android:name=".Activities.SettingsActivity" />
+        <activity android:name=".Activities.Transportation.TransportationMainActivity" />
     </application>
 
 </manifest>

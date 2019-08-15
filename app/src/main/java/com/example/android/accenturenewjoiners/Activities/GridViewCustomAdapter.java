@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.accenturenewjoiners.Activities.Transportation.TransportationMainActivity;
 import com.example.android.accenturenewjoiners.R;
 
 public class GridViewCustomAdapter extends BaseAdapter {
@@ -70,7 +71,11 @@ public class GridViewCustomAdapter extends BaseAdapter {
                     v.getContext().startActivity(intent);
                 }
                 if(position == 1) {
-                    Intent intent= new Intent(context, PrivacyPolicyActivity.class);
+                    Intent intent= new Intent(context, TransportationMainActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+                if(position == 2) {
+                    Intent intent= new Intent(context, TransportationMainActivity.class);
                     v.getContext().startActivity(intent);
                 }
                 if(position == 15) {
