@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.accenturenewjoiners.Activities.Transportation.TransportationMainActivity;
+import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMain;
 import com.example.android.accenturenewjoiners.R;
 
 public class GridViewCustomAdapter extends BaseAdapter {
@@ -77,6 +78,10 @@ public class GridViewCustomAdapter extends BaseAdapter {
                 if(position == 2) {
                     Intent intent= new Intent(context, TransportationMainActivity.class);
                     v.getContext().startActivity(intent);
+                }
+                if(position == 10) {
+                        Intent intent= new Intent(context, WellnessMain.class);
+                        v.getContext().startActivity(intent);
                 }
                 if(position == 15) {
                     Intent intent= new Intent(context, News.class);

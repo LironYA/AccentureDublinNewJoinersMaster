@@ -1,8 +1,5 @@
 package com.example.android.accenturenewjoiners.Activities;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -15,11 +12,6 @@ import android.widget.TextView;
 import com.example.android.accenturenewjoiners.R;
 import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import android.widget.ArrayAdapter;
 
