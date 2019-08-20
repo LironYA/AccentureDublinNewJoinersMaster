@@ -65,7 +65,6 @@ import java.net.URL;
                 }
 
                 return null;
-
             }
 
             @Override
@@ -75,7 +74,5 @@ import java.net.URL;
 
                 super.onPostExecute(finalTextHolder);
             }
-
         }
-
 }
