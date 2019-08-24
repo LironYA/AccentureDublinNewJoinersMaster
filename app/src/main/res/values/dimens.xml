@@ -17,6 +17,6 @@
         <dimen name="margin_main">8dp</dimen>
         <dimen name="line_spacing">4sp</dimen>
         <dimen name="line_spacing_publish">12sp</dimen>
-        <dimen name="line_padding">25dp</dimen>
-        <dimen name="shape_radius">15dp</dimen>
+        <dimen name="line_padding">20dp</dimen>
+        <dimen name="shape_radius">20dp</dimen>
 </resources>

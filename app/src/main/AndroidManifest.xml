@@ -52,6 +52,8 @@
         <activity android:name=".Activities.FindHouse.FindHouseMain" />
         <activity android:name=".Activities.Bills.BillsMain" />
         <activity android:name=".Activities.Immigration.ImmigrationMain" />
+        <activity android:name=".Activities.Revenue.RevenueMain" />
+        <activity android:name=".Activities.Welfare.WelfareMain" />
     </application>
 
 </manifest>

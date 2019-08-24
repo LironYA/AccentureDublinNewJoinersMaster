@@ -3,14 +3,17 @@ package com.example.android.accenturenewjoiners.Activities.Transportation;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.accenturenewjoiners.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -22,7 +25,7 @@ public class ArrayListAdapter extends ArrayAdapter<ArrayListFragments> {
     }
 
     @NonNull
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
         if (listItemView == null) {
             //We create a new list item layout
@@ -32,12 +35,12 @@ public class ArrayListAdapter extends ArrayAdapter<ArrayListFragments> {
         TextView CityText = (TextView) listItemView.findViewById(R.id.text_view_selection);
         CityText.setText(currentEntry.getDescriptionSites());
         ImageView city_image = (ImageView) listItemView.findViewById(R.id.city_image);
-        city_image.setImageResource(currentEntry.getImage());
         city_image.setVisibility(View.VISIBLE);
+        Picasso.get().load(currentEntry.getImage()).fit().into(city_image);
         TextView info_text = (TextView) listItemView.findViewById(R.id.click);
         info_text.setText(currentEntry.getInfo());
-        return listItemView;
-    }
 
+            return listItemView;
 
-}
+        }}
+

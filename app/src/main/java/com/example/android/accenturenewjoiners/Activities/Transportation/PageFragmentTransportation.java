@@ -1,13 +1,9 @@
 package com.example.android.accenturenewjoiners.Activities.Transportation;
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+
 
 public class PageFragmentTransportation extends FragmentPagerAdapter {
     private final int PAGE_COUNT = 4;
@@ -26,16 +22,16 @@ public class PageFragmentTransportation extends FragmentPagerAdapter {
         @Override
         public Fragment getItem ( int position){
             if (position == 0) {
-                return new ShuttelFragment();
+                return new ShuttelServiceFragment();
             }
             if (position == 1) {
-                return new ShuttelFragment();
+                return new LuasFragment();
             }
             if (position == 2) {
-                return new ShuttelFragment();
+                return new BusFragment();
 
             } else {
-                return new ShuttelFragment();
+                return new BusFragment();
             }
         }
 

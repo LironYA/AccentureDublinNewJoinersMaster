@@ -13,8 +13,10 @@ import android.widget.Toast;
 import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
 import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
 import com.example.android.accenturenewjoiners.Activities.Immigration.ImmigrationMain;
+import com.example.android.accenturenewjoiners.Activities.Revenue.RevenueMain;
 import com.example.android.accenturenewjoiners.Activities.StartingOut.StartingOut;
 import com.example.android.accenturenewjoiners.Activities.Transportation.TransportationMainActivity;
+import com.example.android.accenturenewjoiners.Activities.Welfare.WelfareMain;
 import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMain;
 import com.example.android.accenturenewjoiners.R;
 
@@ -95,6 +97,16 @@ public class GridViewCustomAdapter extends BaseAdapter {
                 if(position == 5)
                 {
                     Intent intent= new Intent(context, ImmigrationMain.class);
+                    v.getContext().startActivity(intent);
+                }
+                if(position == 6)
+                {
+                    Intent intent= new Intent(context, RevenueMain.class);
+                    v.getContext().startActivity(intent);
+                }
+                if(position == 7)
+                {
+                    Intent intent= new Intent(context, WelfareMain.class);
                     v.getContext().startActivity(intent);
                 }
                 if(position == 10) {
