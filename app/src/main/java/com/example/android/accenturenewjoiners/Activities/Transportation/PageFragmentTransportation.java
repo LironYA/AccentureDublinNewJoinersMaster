@@ -28,7 +28,7 @@ public class PageFragmentTransportation extends FragmentPagerAdapter {
                 return new LuasFragment();
             }
             if (position == 2) {
-                return new BusFragment();
+                return new DartFragment();
 
             } else {
                 return new BusFragment();

@@ -25,7 +25,7 @@ public class PageFragmentStartingOut extends FragmentPagerAdapter {
             return new GeneralFragment();
         }
         if (position == 1) {
-            return new GeneralFragment();
+            return new DublinMapFragment();
         }
          else {
             return new GeneralFragment();

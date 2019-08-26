@@ -11,20 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
-import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
-import com.example.android.accenturenewjoiners.Activities.Immigration.ImmigrationMain;
-import com.example.android.accenturenewjoiners.Activities.Locations;
-import com.example.android.accenturenewjoiners.Activities.MainActivity;
-
-import com.example.android.accenturenewjoiners.Activities.MainScreen;
-import com.example.android.accenturenewjoiners.Activities.News;
-import com.example.android.accenturenewjoiners.Activities.Revenue.RevenueMain;
-import com.example.android.accenturenewjoiners.Activities.StartingOut.StartingOut;
-import com.example.android.accenturenewjoiners.Activities.Welfare.WelfareMain;
-import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMain;
 import com.example.android.accenturenewjoiners.R;
 
 import java.util.ArrayList;
@@ -43,10 +30,10 @@ public class LuasFragment extends Fragment {
 
         final ArrayList<ArrayListFragments> luas = new ArrayList<ArrayListFragments>();
 
-        luas.add(new ArrayListFragments("https://www.google.com","Luas Green Line", "https://www.luas.ie/assets/theme/images/Luas-og-img.png", "Get information for Luas green line. \n Stop Map, Tickets, Operating Hours and Frequency"));
-        luas.add(new ArrayListFragments("https://google.com","Luas Red Line", "https://www.luas.ie/assets/theme/images/Luas-og-img.png", "Get information for Luas red line. \n Stop Map, Tickets, Operating Hours and Frequency"));
-        luas.add(new ArrayListFragments("https://google.com","Luas Ticket Types", "https://www.luas.ie/assets/theme/images/Luas-og-img.png", "Get information for all Luas's Ticket Types"));
-        luas.add(new ArrayListFragments("https://google.com","Luas Times", "https://www.luas.ie/assets/theme/images/Luas-og-img.png", ""));
+        luas.add(new ArrayListFragments("https://luas.ie/luas-green-line-stops","Luas Green Line", "https://www.luas.ie/assets/theme/images/Luas-og-img.png", "Get information for Luas green line. \n Stop Map, Tickets, Operating Hours and Frequency"));
+        luas.add(new ArrayListFragments("https://luas.ie/luas-red-line-stops","Luas Red Line", "https://www.luas.ie/assets/theme/images/Luas-og-img.png", "Get information for Luas red line. \n Stop Map, Tickets, Operating Hours and Frequency"));
+        luas.add(new ArrayListFragments("https://luas.ie/ticket-types.html","Luas Ticket Types", "https://www.luas.ie/assets/theme/images/Luas-og-img.png", "Get information for all Luas's Ticket Types"));
+        luas.add(new ArrayListFragments("https://luas.ie/operating-hours.html","Luas Times", "https://www.luas.ie/assets/theme/images/Luas-og-img.png", "Get information for Luas's times"));
         final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), luas);
         listView = (ListView) rootView.findViewById(R.id.list);
 
@@ -55,7 +42,7 @@ public class LuasFragment extends Fragment {
         listView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-ArrayListFragments luas_sites = luas.get(position);
+                    ArrayListFragments luas_sites = luas.get(position);
                     Uri siteURL = Uri.parse(luas_sites.getURL());
                     Intent intent = new Intent(Intent.ACTION_VIEW, siteURL);
                     getActivity().startActivity(intent);
@@ -69,13 +56,6 @@ ArrayListFragments luas_sites = luas.get(position);
     }
 
 }
-
-
-        //OnClickListener
-
-
-
-//getApplicationContext
 
 
 
