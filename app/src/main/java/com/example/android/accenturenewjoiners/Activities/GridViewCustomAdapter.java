@@ -10,12 +10,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.accenturenewjoiners.Activities.Accenture.AccentureMain;
 import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
 import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
 import com.example.android.accenturenewjoiners.Activities.Immigration.ImmigrationMain;
 import com.example.android.accenturenewjoiners.Activities.Revenue.RevenueMain;
 import com.example.android.accenturenewjoiners.Activities.StartingOut.StartingOut;
 import com.example.android.accenturenewjoiners.Activities.Transportation.TransportationMainActivity;
+import com.example.android.accenturenewjoiners.Activities.Weather.WeatherMain;
 import com.example.android.accenturenewjoiners.Activities.Welfare.WelfareMain;
 import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMain;
 import com.example.android.accenturenewjoiners.R;
@@ -73,47 +75,108 @@ public class GridViewCustomAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 // TODO ??Possibly change to case?? an intent will open a new activity when clicked. Maybe use extra here
+                //About Accenture
                 if(position == 0) {
-                    Intent intent= new Intent(context, Locations.class);
+                    Intent intent= new Intent(context, AccentureMain.class);
                     v.getContext().startActivity(intent);
                 }
+                //Locations
                 if(position == 1) {
-                    Intent intent= new Intent(context, TransportationMainActivity.class);
+                    Intent intent= new Intent(context, Locations.class);
+
                     v.getContext().startActivity(intent);
                 }
+                //News
                 if(position == 2) {
+                    Intent intent= new Intent(context, News.class);
+                    v.getContext().startActivity(intent);
+                }
+                //Starting out
+                if(position == 3) {
                     Intent intent= new Intent(context, StartingOut.class);
                     v.getContext().startActivity(intent);
                 }
-                if(position == 3) {
+                //find a house
+                if(position == 4)
+                {
                     Intent intent= new Intent(context, FindHouseMain.class);
                     v.getContext().startActivity(intent);
                 }
-                if(position == 4)
+                //Transportation
+                if(position == 5)
+                {
+                    Intent intent= new Intent(context, TransportationMainActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+                //Bills
+                if(position == 6)
                 {
                     Intent intent= new Intent(context, BillsMain.class);
                     v.getContext().startActivity(intent);
                 }
-                if(position == 5)
+                //Immigration
+                if(position == 7)
                 {
                     Intent intent= new Intent(context, ImmigrationMain.class);
                     v.getContext().startActivity(intent);
                 }
-                if(position == 6)
-                {
+                //Revenue
+                if(position == 8) {
                     Intent intent= new Intent(context, RevenueMain.class);
-                    v.getContext().startActivity(intent);
+                        v.getContext().startActivity(intent);
                 }
-                if(position == 7)
-                {
+                //Welfare
+                if(position == 9) {
                     Intent intent= new Intent(context, WelfareMain.class);
                     v.getContext().startActivity(intent);
                 }
+                //Health Care
                 if(position == 10) {
-                        Intent intent= new Intent(context, WellnessMain.class);
-                        v.getContext().startActivity(intent);
+                    Intent intent= new Intent(context, WellnessMain.class);
+                    v.getContext().startActivity(intent);
                 }
+                //Emergency Information
+                if(position == 11) {
+                    Intent intent= new Intent(context, WellnessMain.class);
+                    v.getContext().startActivity(intent);
+                }
+                //Accenture Wellness
+                if(position == 12) {
+                    Intent intent= new Intent(context, WellnessMain.class);
+                    v.getContext().startActivity(intent);
+                }
+                // HR Information
+                if(position == 13) {
+                    Intent intent= new Intent(context, News.class);
+                    v.getContext().startActivity(intent);
+                }
+                //Report Incident
+                if(position == 14) {
+                    Intent intent= new Intent(context, News.class);
+                    v.getContext().startActivity(intent);
+                }
+                //Benefits
                 if(position == 15) {
+                    Intent intent= new Intent(context, News.class);
+                    v.getContext().startActivity(intent);
+                }
+                //Weather forecast
+                if(position == 16) {
+                    Intent intent= new Intent(context, WeatherMain.class);
+                    v.getContext().startActivity(intent);
+                }
+                //Things to see
+                if(position == 17) {
+                    Intent intent= new Intent(context, News.class);
+                    v.getContext().startActivity(intent);
+                }
+                //Relocating with kids
+                if(position == 18) {
+                    Intent intent= new Intent(context, News.class);
+                    v.getContext().startActivity(intent);
+                }
+                //contact us
+                if(position == 19) {
                     Intent intent= new Intent(context, News.class);
                     v.getContext().startActivity(intent);
                 }

@@ -54,6 +54,8 @@
         <activity android:name=".Activities.Immigration.ImmigrationMain" />
         <activity android:name=".Activities.Revenue.RevenueMain" />
         <activity android:name=".Activities.Welfare.WelfareMain" />
+        <activity android:name=".Activities.Weather.WeatherMain" />
+        <activity android:name=".Activities.Accenture.AccentureMain" />
     </application>
 
 </manifest>

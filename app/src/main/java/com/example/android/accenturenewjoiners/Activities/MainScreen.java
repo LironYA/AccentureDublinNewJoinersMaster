@@ -60,10 +60,12 @@ public class MainScreen extends AppCompatActivity {
     GridView gridview;
 
     public static String[] osNameList = {
-            "Accenture Locations",
-            "Transportation",
+            "About Accenture",
+            "Locations",
+            "Breaking News",
             "Starting Out in Ireland",
             "Finding a House",
+            "Transportation",
             "Bills",
             "Immigration",
             "Revenue",
@@ -74,18 +76,18 @@ public class MainScreen extends AppCompatActivity {
             "HR Information",
             "Report an Incident",
             "Benefits",
-            "Weather Forcast",
-            "Breaking News",
-            "Things to See",
             "Relocating with Kids",
-            "About Accenture",
+            "Things to See",
+            "Weather Forcast",
             "Contact Us",
     };
     public static int[] accentureHomeImages = {
+            R.drawable.about,
             R.drawable.location,
-            R.drawable.train,
+            R.drawable.news,
             R.drawable.ireland,
             R.drawable.findhouse,
+            R.drawable.train,
             R.drawable.euro,
             R.drawable.immigration,
             R.drawable.revenue,
@@ -96,11 +98,9 @@ public class MainScreen extends AppCompatActivity {
             R.drawable.hrinfo,
             R.drawable.report,
             R.drawable.benefits,
-            R.drawable.weather,
-            R.drawable.news,
-            R.drawable.thingstosee,
             R.drawable.abc,
-            R.drawable.about,
+            R.drawable.thingstosee,
+            R.drawable.weather,
             R.drawable.contactus,};
 
     @Override
