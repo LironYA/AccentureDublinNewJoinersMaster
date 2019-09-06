@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/greaterthan"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+    <TextView
+        android:id="@+id/dublinTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/imageButtondublin"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to Accenture's on boarding app!\n Please choose your Accenture location"/>
+
+    <ImageButton
+        android:id="@+id/imageButtondublin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:contentDescription="Accenture Dublin"
+        android:cropToPadding="true"
+
+
+        android:clickable="true"
+        android:src="@drawable/acc_dub"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLisbon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButtondublin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:focusable="true"
+        android:clickable="true"
+
+        android:background="@drawable/button_shape"
+        android:contentDescription="Accenture Lisbon"
+        android:src="@drawable/acc_lis" />
+
+</RelativeLayout>

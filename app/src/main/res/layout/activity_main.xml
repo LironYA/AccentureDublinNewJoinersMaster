@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/greaterthan"
     android:orientation="vertical"
+    android:id="@+id/rl"
     android:gravity="center"
     android:padding="20dp">
 
@@ -22,7 +24,7 @@
         android:shadowRadius="1"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:text="Welcome new joiners to Accenture Dublin!"
+        android:text="Welcome new joiners!"
         android:textAlignment="center"
         android:textColor="@color/accentureBlue"
         android:textSize="24sp"

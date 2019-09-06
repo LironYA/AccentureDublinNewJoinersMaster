@@ -23,6 +23,9 @@ public class Prefrences {
     // All Shared Preferences Keys
     private static final String IS_LOGIN = "IsLoggedIn";
 
+    //Check Box
+    private static final String CHECK_BOX_STATUS = "not_checked";
+
     // User name (make variable public to access from outside)
     public static final String USER = "user";
 
@@ -40,10 +43,14 @@ public class Prefrences {
         editor.putBoolean(IS_LOGIN, true);
         // Storing name in pref
         editor.putString(USER, user);
-
         // Storing email in pref
         editor.putString(NAME, name);
         // commit changes
+        editor.commit();
+    }
+
+    public void notLoggedIn() {
+        editor.putBoolean(IS_LOGIN, false);
         editor.commit();
     }
 
@@ -56,6 +63,7 @@ public class Prefrences {
 }
     // Get Login State
     public boolean isLoggedIn(){
+
         return pref.getBoolean(IS_LOGIN, false);
     }
 }
