@@ -57,6 +57,7 @@
         <activity android:name=".Activities.Weather.WeatherMain" />
         <activity android:name=".Activities.Accenture.AccentureMain" />
         <activity android:name=".Activities.SelectCountryScreen" />
+        <activity android:name=".Activities.Lisbon.LisbonMainScreen" />
     </application>
 
 </manifest>

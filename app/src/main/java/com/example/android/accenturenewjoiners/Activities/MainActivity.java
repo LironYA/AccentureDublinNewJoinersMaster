@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.PopupWindow;
 
+import com.example.android.accenturenewjoiners.Activities.Lisbon.LisbonMainScreen;
 import com.example.android.accenturenewjoiners.R;
 
 public class MainActivity extends Activity {
@@ -47,6 +48,7 @@ public class MainActivity extends Activity {
         //Remove title bar
 
         sp = getSharedPreferences("logged",MODE_PRIVATE);
+        sp = getSharedPreferences("country",MODE_PRIVATE);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.setContentView(R.layout.activity_main);
         mLinearLayout = (LinearLayout) findViewById(R.id.rl);
@@ -72,7 +74,7 @@ public class MainActivity extends Activity {
             //        Intent i = new Intent(this, News.class);
             //        this.startActivity(i);
         if(sp.getBoolean("logged", false) && sp.getBoolean("country", false)) {
-            Intent i = new Intent(this, News.class);
+            Intent i = new Intent(this, LisbonMainScreen.class);
             this.startActivity(i);
         }
 
@@ -111,6 +113,8 @@ public class MainActivity extends Activity {
 
                                    // Dismiss the popup window
                                    PopupWindow.dismiss();
+                                   sp.edit().remove("country").apply();
+
                                    Intent intent = new Intent(MainActivity.this, MainScreen.class);
                                    startActivity(intent);
                                }
@@ -131,7 +135,8 @@ public class MainActivity extends Activity {
                         public void onClick(View view) {
                             // Dismiss the popup window
                             PopupWindow.dismiss();
-                            Intent intent = new Intent(MainActivity.this, News.class);
+                            sp.edit().putBoolean("country",true).apply();
+                            Intent intent = new Intent(MainActivity.this, LisbonMainScreen.class);
                             startActivity(intent);
                         }
                     });

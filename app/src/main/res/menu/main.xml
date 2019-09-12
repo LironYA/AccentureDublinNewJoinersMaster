@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:icon="@drawable/settings"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_logout"
+        android:id="@+id/change_country"
         android:orderInCategory="100"
-        android:title="@string/action_logout"
-        app:showAsAction="never" />
+        android:title="@string/change_country"
+        app:showAsAction="ifRoom"
+         />
 </menu>

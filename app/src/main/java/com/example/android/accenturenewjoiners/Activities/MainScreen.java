@@ -1,6 +1,7 @@
 package com.example.android.accenturenewjoiners.Activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -22,6 +23,7 @@ import android.widget.GridView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.android.accenturenewjoiners.Activities.Lisbon.LisbonMainScreen;
 import com.example.android.accenturenewjoiners.Activities.Other.CircleTransform;
 import com.example.android.accenturenewjoiners.R;
 
@@ -35,6 +37,7 @@ public class MainScreen extends AppCompatActivity {
     private TextView txtName, txtWebsite;
     private Toolbar toolbar;
     private FloatingActionButton fab;
+    SharedPreferences sp;
 
     // urls to load navigation header background image and profile image
     private static final String urlNavHeaderBg = "https://www.accenture.com/t20190226T023011Z__w__/ie-en/_acnmedia/Accenture/Conversion-Assets/MainPages/Images/Global_26/Accenture-Electric-Purple-Logo-marquee.png";
@@ -110,6 +113,8 @@ public class MainScreen extends AppCompatActivity {
         gridview = (GridView) findViewById(R.id.customgrid);
         gridview.setAdapter(new GridViewCustomAdapter(this, osNameList, accentureHomeImages));
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        sp = getSharedPreferences("country",MODE_PRIVATE);
+
         setSupportActionBar(toolbar);
 
         mHandler = new Handler();
@@ -353,8 +358,10 @@ public class MainScreen extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_logout) {
-            Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
+        if (id == R.id.change_country) {
+            sp.edit().putBoolean("country",true).apply();
+            Intent intent = new Intent(this, LisbonMainScreen.class);
+            startActivity(intent);
             return true;
         }
 
