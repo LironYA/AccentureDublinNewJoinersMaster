@@ -114,7 +114,6 @@ public class MainActivity extends Activity {
                                    // Dismiss the popup window
                                    PopupWindow.dismiss();
                                    sp.edit().remove("country").apply();
-
                                    Intent intent = new Intent(MainActivity.this, MainScreen.class);
                                    startActivity(intent);
                                }

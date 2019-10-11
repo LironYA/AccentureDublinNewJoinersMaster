@@ -23,9 +23,12 @@ public class HouseWebsitesFragments extends Fragment {
         final View rootView = inflater.inflate(R.layout.fragment_list_activity, container, false);
 
         final ArrayList<ArrayListFragments> house_websites = new ArrayList<ArrayListFragments>();
-        house_websites.add(new ArrayListFragments("https://google.com","Gordon", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "Gordon Beach boasts volleyball courts and a lovely saltwater swimming pool, surrounded by lawns to lounge on. On the boardwalk you’ll find a myriad of restaurants serving huge portions of classics like Israeli breakfast, fresh fish, sandwiches and a huge array of salads."));
-        house_websites.add(new ArrayListFragments("https://google.com","Tel Aviv Port", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "It has a little bit of everything that is Tel Aviv - blue sea, serene mornings, bustling markets, shops and restaurants galore, kids stuff, outdoor happenings and a lively night scene with clubs and bars."));
-        house_websites.add(new ArrayListFragments("https://google.com","Sarona", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "Sarona is popular for its namesake covered market, a trendy hub of gourmet food stores selling local cheeses and cured meats, with restaurants by big-name Israeli chefs known for creative cuisine emphasizing seasonal ingredients. The area is full of busy bars serving cocktails and craft beer, while nearby, 19th-century cellars built by Templar Christians have been transformed into chic subterranean wine bars."));
+        house_websites.add(new ArrayListFragments("https://www.daft.ie/","daft.ie", "https://c1.dmstatic.com/572d0d4dc09fa2f1b0801/frontend/images/logo@2x.png", "View Houses To Rent or Share in Dublin, the Largest Property Listings Website in Ireland."));
+        house_websites.add(new ArrayListFragments("https://www.myhome.ie/rentals/dublin/property-to-rent","myhome.ie", "https://www.myhome.ie/assets/images/new_logo_v2.png", "Find Dublin property to rent or share."));
+        house_websites.add(new ArrayListFragments("https://www.rent.ie/","rent.ie", "https://pngriver.com/wp-content/uploads/2018/03/Download-Rent-PNG-Pic-366.png", "Rent / Share Houses & Apartments in Ireland."));
+        house_websites.add(new ArrayListFragments("https://www.rent.ie/","rent.ie", "https://pngriver.com/wp-content/uploads/2018/03/Download-Rent-PNG-Pic-366.png", "Rent / Share Houses & Apartments in Ireland."));
+        house_websites.add(new ArrayListFragments("https://www.rent.ie/","rent.ie", "https://pngriver.com/wp-content/uploads/2018/03/Download-Rent-PNG-Pic-366.png", "Rent / Share Houses & Apartments in Ireland."));
+
         final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), house_websites);
 
         final ListView listView = (ListView) rootView.findViewById(R.id.list);

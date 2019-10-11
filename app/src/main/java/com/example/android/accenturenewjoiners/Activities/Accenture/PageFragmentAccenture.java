@@ -26,10 +26,10 @@ public class PageFragmentAccenture extends FragmentPagerAdapter {
             return new InformationFragment();
         }
         if (position == 1) {
-            return new InformationFragment();
+            return new EmailWebFragment();
         }
         else {
-            return new InformationFragment();
+            return new AboutAccentureFragment();
         }
     }
 

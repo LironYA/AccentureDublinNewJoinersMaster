@@ -14,7 +14,7 @@ import com.example.android.accenturenewjoiners.R;
 import java.util.ArrayList;
 
     public class GeneralFragment extends Fragment {
-
+// Revenue office phone: 017023011
 
         public GeneralFragment() {
             // Required empty public constructor

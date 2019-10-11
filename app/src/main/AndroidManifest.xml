@@ -58,6 +58,8 @@
         <activity android:name=".Activities.Accenture.AccentureMain" />
         <activity android:name=".Activities.SelectCountryScreen" />
         <activity android:name=".Activities.Lisbon.LisbonMainScreen" />
+        <activity android:name=".Activities.Lisbon.LocationsLisbon" />
+        <activity android:name=".Activities.Wellness.WellnessMainScreen" />
     </application>
 
 </manifest>

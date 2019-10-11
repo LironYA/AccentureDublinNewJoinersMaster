@@ -86,7 +86,7 @@ public class GridViewCustomAdapterLisbon extends BaseAdapter {
                 }
                 //Locations
                 if (position == 1) {
-                    Intent intent = new Intent(context, Locations.class);
+                    Intent intent = new Intent(context, LocationsLisbon.class);
 
                     v.getContext().startActivity(intent);
                 }
