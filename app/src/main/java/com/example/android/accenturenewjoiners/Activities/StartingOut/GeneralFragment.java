@@ -1,10 +1,14 @@
 package com.example.android.accenturenewjoiners.Activities.StartingOut;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.android.accenturenewjoiners.Activities.Transportation.ArrayListAdapter;
@@ -25,14 +29,25 @@ import java.util.ArrayList;
             final View rootView = inflater.inflate(R.layout.fragment_list_activity, container, false);
 
             final ArrayList<ArrayListFragments> general = new ArrayList<ArrayListFragments>();
-            general.add(new ArrayListFragments("https://google.com","Ireland", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "Gordon Beach boasts volleyball courts and a lovely saltwater swimming pool, surrounded by lawns to lounge on. On the boardwalk you’ll find a myriad of restaurants serving huge portions of classics like Israeli breakfast, fresh fish, sandwiches and a huge array of salads."));
-            general.add(new ArrayListFragments("https://google.com","Main Routes", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "It has a little bit of everything that is Tel Aviv - blue sea, serene mornings, bustling markets, shops and restaurants galore, kids stuff, outdoor happenings and a lively night scene with clubs and bars."));
-            general.add(new ArrayListFragments("https://google.com","Apply for visa", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "Sarona is popular for its namesake covered market, a trendy hub of gourmet food stores selling local cheeses and cured meats, with restaurants by big-name Israeli chefs known for creative cuisine emphasizing seasonal ingredients. The area is full of busy bars serving cocktails and craft beer, while nearby, 19th-century cellars built by Templar Christians have been transformed into chic subterranean wine bars."));
+            general.add(new ArrayListFragments("https://www.dublinairport.com/to-from-the-airport/by-bus/dublin-buses","Dublin Bus from the Airport", "https://www.dublinairport.com/images/default-source/to-and-from-airport/bus-airlink.png?sfvrsn=5f7a88c0_2", "If you travel light, you can take a bus from the airport for only 7€ or 12€ return."));
+            general.add(new ArrayListFragments("https://play.google.com/store/apps/details?id=com.airbnb.android&hl=en","AirBNB App", "https://lh3.googleusercontent.com/BQnvuZR500pg2ulvv3FBmRI93ODz3AjNfbz92hCieuJLvmbGY36AKhETMTTfTDgpPQI=s180-rw", "The world's leading app for short term housing."));
+            general.add(new ArrayListFragments("https://play.google.com/store/apps/details?id=com.booking","Booking.com App", "https://lh3.googleusercontent.com/A0QsKezU_em5H1IiwKUUluEDOK7VuGVNLii3FVL89NDVKVvRsOSHjS5AeLAUywYhArE3=s180-rw", "Hotels, apartments, hostels and vacation rentals."));
             final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), general);
 
             final ListView listView = (ListView) rootView.findViewById(R.id.list);
             listView.setAdapter(adapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                    ArrayListFragments general_information = general.get(position);
+                    Uri siteURL = Uri.parse(general_information.getURL());
+                    Intent intent = new Intent(Intent.ACTION_VIEW, siteURL);
+                    getActivity().startActivity(intent);
+                    Log.i("Test", "Test");
 
+                }
+
+            });
             return rootView;
 
         }

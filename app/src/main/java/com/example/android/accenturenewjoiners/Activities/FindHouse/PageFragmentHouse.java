@@ -25,9 +25,9 @@ public class PageFragmentHouse extends FragmentPagerAdapter {
             return new HouseWebsitesFragments();
         }
         if (position == 1) {
-            return new HouseWebsitesFragments();
+            return new HouseFBGroups();
         } else {
-            return new HouseWebsitesFragments();
+            return new OtherServicesFragment();
         }
     }
 
