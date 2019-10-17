@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class PageFragmentBills extends FragmentPagerAdapter {
     private final int PAGE_COUNT = 3;
-    private String tabs[] = new String[]{"Electricity", "Gas", "Compare Comapnies"};
+    private String tabs[] = new String[]{"Electricity & Gas", "Internet & TV", "Mobile Phone Plans"};
     private Context context;
     public PageFragmentBills(FragmentManager fragmentManager, Context context) {
         super(fragmentManager);
@@ -25,7 +25,7 @@ public class PageFragmentBills extends FragmentPagerAdapter {
             return new ElectricityFragment();
         }
         if (position == 1) {
-            return new ElectricityFragment();
+            return new InternetFragment();
         } else {
             return new ElectricityFragment();
         }

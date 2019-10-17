@@ -47,7 +47,7 @@
             android:theme="@style/News"/>
         <activity android:name=".Activities.SettingsActivity" />
         <activity android:name=".Activities.Transportation.TransportationMainActivity" />
-        <activity android:name=".Activities.Wellness.WellnessMain" />
+        <activity android:name=".Activities.Wellness.WellnessMainScreen" />
         <activity android:name=".Activities.StartingOut.StartingOut" />
         <activity android:name=".Activities.FindHouse.FindHouseMain" />
         <activity android:name=".Activities.Bills.BillsMain" />
@@ -60,6 +60,8 @@
         <activity android:name=".Activities.Lisbon.LisbonMainScreen" />
         <activity android:name=".Activities.Lisbon.LocationsLisbon" />
         <activity android:name=".Activities.Wellness.WellnessMainScreen" />
+        <activity android:name=".Activities.Wellness.WellnessVideos" />
+        <activity android:name=".Activities.EmergencyInformation.EmergencyInformationMain" />
     </application>
 
 </manifest>

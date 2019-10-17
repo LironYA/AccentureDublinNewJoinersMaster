@@ -58,7 +58,7 @@ public class WellnessMainScreen extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // if (indexOf(Selection) == 0) {
                 if (position == 0) {
-                    Intent myIntent = new Intent(WellnessMainScreen.this, Locations.class);
+                    Intent myIntent = new Intent(WellnessMainScreen.this, WellnessVideos.class);
                     WellnessMainScreen.this.startActivity(myIntent);
                 }
                 if (position == 1) {

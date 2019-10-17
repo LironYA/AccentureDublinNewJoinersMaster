@@ -1,16 +1,17 @@
-package com.example.android.accenturenewjoiners.Activities.Immigration;
+package com.example.android.accenturenewjoiners.Activities.EmergencyInformation;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class PageFragmentImmigration extends FragmentPagerAdapter {
+
+public class PageFragmentEmergency extends FragmentPagerAdapter {
     private final int PAGE_COUNT = 2;
-    private String tabs[] = new String[]{"Non-EU Citizen", "EU Citizen"};
+    private String tabs[] = new String[]{"Emergency Contacts", "First Aid Videos"};
     private Context context;
 
-    public PageFragmentImmigration(FragmentManager fragmentManager, Context context) {
+    public PageFragmentEmergency(FragmentManager fragmentManager, Context context) {
         super(fragmentManager);
         this.context = context;
     }
@@ -22,10 +23,10 @@ public class PageFragmentImmigration extends FragmentPagerAdapter {
     @Override
     public Fragment getItem (int position){
         if (position == 0) {
-            return new NonEUFragment();
+            return new EmergencyContactsFragment();
         }
         else {
-            return new EUFragment();
+            return new EmergencyContactsFragment();
         }
     }
 

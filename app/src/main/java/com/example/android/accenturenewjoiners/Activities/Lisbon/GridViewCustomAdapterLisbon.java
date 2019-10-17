@@ -24,6 +24,7 @@ import com.example.android.accenturenewjoiners.Activities.Transportation.Transpo
 import com.example.android.accenturenewjoiners.Activities.Weather.WeatherMain;
 import com.example.android.accenturenewjoiners.Activities.Welfare.WelfareMain;
 import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMain;
+import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMainScreen;
 import com.example.android.accenturenewjoiners.R;
 
 public class GridViewCustomAdapterLisbon extends BaseAdapter {
@@ -132,17 +133,17 @@ public class GridViewCustomAdapterLisbon extends BaseAdapter {
                 }
                 //Health Care
                 if (position == 10) {
-                    Intent intent = new Intent(context, WellnessMain.class);
+                    Intent intent = new Intent(context, WellnessMainScreen.class);
                     v.getContext().startActivity(intent);
                 }
                 //Emergency Information
                 if (position == 11) {
-                    Intent intent = new Intent(context, WellnessMain.class);
+                    Intent intent = new Intent(context, WellnessMainScreen.class);
                     v.getContext().startActivity(intent);
                 }
                 //Accenture Wellness
                 if (position == 12) {
-                    Intent intent = new Intent(context, WellnessMain.class);
+                    Intent intent = new Intent(context, WellnessMainScreen.class);
                     v.getContext().startActivity(intent);
                 }
                 // HR Information

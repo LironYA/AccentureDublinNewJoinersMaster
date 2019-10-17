@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.android.accenturenewjoiners.Activities.Accenture.AccentureMain;
 import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
+import com.example.android.accenturenewjoiners.Activities.EmergencyInformation.EmergencyInformationMain;
 import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
 import com.example.android.accenturenewjoiners.Activities.Immigration.ImmigrationMain;
 import com.example.android.accenturenewjoiners.Activities.Revenue.RevenueMain;
@@ -133,12 +134,12 @@ public class GridViewCustomAdapter extends BaseAdapter {
                 }
                 //Health Care
                 if(position == 10) {
-                    Intent intent= new Intent(context, WellnessMain.class);
+                    Intent intent= new Intent(context, WellnessMainScreen.class);
                     v.getContext().startActivity(intent);
                 }
                 //Emergency Information
                 if(position == 11) {
-                    Intent intent= new Intent(context, WellnessMain.class);
+                    Intent intent= new Intent(context, EmergencyInformationMain.class);
                     v.getContext().startActivity(intent);
                 }
                 //Accenture Wellness
