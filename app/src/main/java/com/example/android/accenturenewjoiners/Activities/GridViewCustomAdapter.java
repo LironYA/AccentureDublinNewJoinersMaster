@@ -11,12 +11,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.accenturenewjoiners.Activities.Accenture.AccentureMain;
+import com.example.android.accenturenewjoiners.Activities.Benefits.BenefitsMain;
 import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
 import com.example.android.accenturenewjoiners.Activities.EmergencyInformation.EmergencyInformationMain;
 import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
+import com.example.android.accenturenewjoiners.Activities.HealthCare.HealthCareIreland;
 import com.example.android.accenturenewjoiners.Activities.Immigration.ImmigrationMain;
 import com.example.android.accenturenewjoiners.Activities.Revenue.RevenueMain;
 import com.example.android.accenturenewjoiners.Activities.StartingOut.StartingOut;
+import com.example.android.accenturenewjoiners.Activities.ThingsToSee.ThingsToSeeMain;
 import com.example.android.accenturenewjoiners.Activities.Transportation.TransportationMainActivity;
 import com.example.android.accenturenewjoiners.Activities.Weather.WeatherMain;
 import com.example.android.accenturenewjoiners.Activities.Welfare.WelfareMain;
@@ -134,7 +137,7 @@ public class GridViewCustomAdapter extends BaseAdapter {
                 }
                 //Health Care
                 if(position == 10) {
-                    Intent intent= new Intent(context, WellnessMainScreen.class);
+                    Intent intent= new Intent(context, HealthCareIreland.class);
                     v.getContext().startActivity(intent);
                 }
                 //Emergency Information
@@ -159,22 +162,22 @@ public class GridViewCustomAdapter extends BaseAdapter {
                 }
                 //Benefits
                 if(position == 15) {
-                    Intent intent= new Intent(context, News.class);
+                    Intent intent= new Intent(context, BenefitsMain.class);
                     v.getContext().startActivity(intent);
                 }
-                //Weather forecast
+                //Relocating with kids
                 if(position == 16) {
                     Intent intent= new Intent(context, WeatherMain.class);
                     v.getContext().startActivity(intent);
                 }
                 //Things to see
                 if(position == 17) {
-                    Intent intent= new Intent(context, News.class);
+                    Intent intent= new Intent(context, ThingsToSeeMain.class);
                     v.getContext().startActivity(intent);
                 }
-                //Relocating with kids
+                //Weather
                 if(position == 18) {
-                    Intent intent= new Intent(context, News.class);
+                    Intent intent= new Intent(context, WeatherMain.class);
                     v.getContext().startActivity(intent);
                 }
                 //contact us

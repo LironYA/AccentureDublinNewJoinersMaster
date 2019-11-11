@@ -27,7 +27,7 @@ public class PageFragmentRevenue extends FragmentPagerAdapter {
             return new GeneralRevenueFragment();
         }
         else {
-            return new GeneralRevenueFragment();
+            return new RevenueDetailsFragment();
         }
     }
 

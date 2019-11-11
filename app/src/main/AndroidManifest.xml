@@ -41,7 +41,9 @@
             android:theme="@style/AppTheme">
 
         </activity>
-        <activity android:name=".Activities.Locations" />
+        <activity android:name=".Activities.Locations"
+
+            />
         <activity android:name=".Activities.News"
             android:label="News"
             android:theme="@style/News"/>
@@ -62,6 +64,12 @@
         <activity android:name=".Activities.Wellness.WellnessMainScreen" />
         <activity android:name=".Activities.Wellness.WellnessVideos" />
         <activity android:name=".Activities.EmergencyInformation.EmergencyInformationMain" />
+        <activity android:name=".Activities.HealthCare.HealthCareIreland" />
+        <activity android:name=".Activities.Wellness.FindWellnessActivityDublinMenu" />
+        <activity android:name=".Activities.Wellness.BlockPDublin" />
+        <activity android:name=".Activities.ThingsToSee.ThingsToSeeMain" />
+        <activity android:name=".Activities.Benefits.BenefitsMain" />
+        <activity android:name=".Activities.Wellness.WellnessMain" />
     </application>
 
 </manifest>

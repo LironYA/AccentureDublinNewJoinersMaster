@@ -26,7 +26,7 @@ public class PageFragmentWelfare extends FragmentPagerAdapter {
             return new GeneralWelfareFragment();
         }
         else {
-            return new GeneralWelfareFragment();
+            return new WelfareHowToApplyFragment();
         }
     }
 

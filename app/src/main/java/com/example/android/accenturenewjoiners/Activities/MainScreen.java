@@ -27,6 +27,8 @@ import com.example.android.accenturenewjoiners.Activities.Lisbon.LisbonMainScree
 import com.example.android.accenturenewjoiners.Activities.Other.CircleTransform;
 import com.example.android.accenturenewjoiners.R;
 
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
+
 
 public class MainScreen extends AppCompatActivity {
 
@@ -171,16 +173,18 @@ public class MainScreen extends AppCompatActivity {
 
         // loading header background image
         Glide.with(this).load(urlNavHeaderBg)
-                .crossFade()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
+            //    .crossFade()
+               // .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .transition(withCrossFade())
                 .into(imgNavHeaderBg);
 
         // Loading profile image
         Glide.with(this).load(urlProfileImg)
-                .crossFade()
+               // .crossFade()
                 .thumbnail(0.5f)
-                .bitmapTransform(new CircleTransform(this))
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .transition(withCrossFade())
+              //  .bitmapTransform(new CircleTransform(this))
+             //   .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(imgProfile);
 
         // showing dot next to notifications label

@@ -1,10 +1,14 @@
 package com.example.android.accenturenewjoiners.Activities.Welfare;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.android.accenturenewjoiners.Activities.Transportation.ArrayListAdapter;
@@ -23,16 +27,27 @@ public class GeneralWelfareFragment extends Fragment {
         final View rootView = inflater.inflate(R.layout.fragment_list_activity, container, false);
 
         final ArrayList<ArrayListFragments> generalWelfare = new ArrayList<ArrayListFragments>();
-        generalWelfare.add(new ArrayListFragments("https://google.com","Gordon", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "Gordon Beach boasts volleyball courts and a lovely saltwater swimming pool, surrounded by lawns to lounge on. On the boardwalk you’ll find a myriad of restaurants serving huge portions of classics like Israeli breakfast, fresh fish, sandwiches and a huge array of salads."));
-        generalWelfare.add(new ArrayListFragments("https://google.com","Tel Aviv Port", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "It has a little bit of everything that is Tel Aviv - blue sea, serene mornings, bustling markets, shops and restaurants galore, kids stuff, outdoor happenings and a lively night scene with clubs and bars."));
-        generalWelfare.add(new ArrayListFragments("https://google.com","Sarona", "https://lh3.googleusercontent.com/QlYEqI4n_7-K6rdb_FblHVpkjwz0qULaobeAhHhZnYXV5BcGB06TPX3un3oQUq3PagTa=w412-h220-rw", "Sarona is popular for its namesake covered market, a trendy hub of gourmet food stores selling local cheeses and cured meats, with restaurants by big-name Israeli chefs known for creative cuisine emphasizing seasonal ingredients. The area is full of busy bars serving cocktails and craft beer, while nearby, 19th-century cellars built by Templar Christians have been transformed into chic subterranean wine bars."));
+        generalWelfare.add(new ArrayListFragments("https://services.mywelfare.ie/en/topics/appointments", "PPS number appointment", "https://services.mywelfare.ie/icons/favicon-96x96.png", "Make or amend appointments for a Personal Public Service Number (PPSN)."));
+        generalWelfare.add(new ArrayListFragments("http://www.welfare.ie/en/pdf/CB1.pdf", "Child Benefit Form", "https://services.mywelfare.ie/icons/favicon-96x96.png", "You need a Personal Public Service Number (PPS No.) for yourself and your child(ren) before you apply.\nOnce done, send the application by mail to the address mentioned in the form."));
+        generalWelfare.add(new ArrayListFragments("http://www.welfare.ie/en/pdf/mb1.pdf","Maternity Benefit Form", "https://services.mywelfare.ie/icons/favicon-96x96.png", "You need a Personal Public Service Number (PPS No.) before you apply."));
+        generalWelfare.add(new ArrayListFragments("https://services.mywelfare.ie/en/topics/parents-children-family/paternity-benefit/","Apply Online for Paternity Benefit", "https://services.mywelfare.ie/icons/favicon-96x96.png", "You will need a MyGovID account ."));
         final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), generalWelfare);
 
         final ListView listView = (ListView) rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                ArrayListFragments luas_sites = generalWelfare.get(position);
+                Uri siteURL = Uri.parse(luas_sites.getURL());
+                Intent intent = new Intent(Intent.ACTION_VIEW, siteURL);
+                getActivity().startActivity(intent);
+                Log.i("Test", "Test");
 
+            }
+
+        });
         return rootView;
 
     }
-
 }

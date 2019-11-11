@@ -21,11 +21,12 @@ public class DartFragment extends Fragment {
 
             View v = inflater.inflate(R.layout.fragment_webview, container, false);
             mWebView = (WebView) v.findViewById(R.id.webview);
-            mWebView.loadUrl("http://www.irishrail.ie/");
+            mWebView.loadUrl("https://www.irishrail.ie/");
 
             // Enable Javascript
             WebSettings webSettings = mWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
+            webSettings.setDomStorageEnabled(true);
 
             // Force links and redirects to open in the WebView instead of in a browser
             mWebView.setWebViewClient(new WebViewClient());

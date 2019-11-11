@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3F51B5"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:background="@drawable/dublincity">
 
     <TextView
         android:id="@+id/city_field"
@@ -11,28 +11,30 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/updated_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/city_field"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="13sp" />
+        android:textColor="@color/colorAccent"
+        android:text="Current Weather at"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40sp"
+        />
     <TextView
         android:id="@+id/selectCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change City"
-        android:textStyle="italic"
-        android:textSize="11dp"
+        android:text="Dublin, Ireland"
         android:textColor="@color/colorAccent"
-        android:layout_below="@+id/updated_field"
+        android:layout_below="@+id/city_field"
+        android:textSize="40sp"
         android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/updated_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectCity"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/accentureBlue"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="30sp" />
+
 
     <TextView
         android:id="@+id/weather_icon"
@@ -40,20 +42,9 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="90sp"
-        />
-
-    <TextView
-        android:id="@+id/current_temperature_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="50sp" />
+        android:textSize="150sp" />
 
     <TextView
         android:id="@+id/details_field"
@@ -73,20 +64,23 @@
         android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceMedium"
         />
-    <TextView
-        android:id="@+id/pressure_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/humidity_field"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        />
 
     <ProgressBar
         android:id="@+id/loader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/current_temperature_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/weather_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-32dp"
+        android:text="Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp" />
 
 </RelativeLayout>

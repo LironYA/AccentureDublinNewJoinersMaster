@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="88dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@drawable/listviewshape">
 
     <ImageView
         android:id="@+id/wellness_image"

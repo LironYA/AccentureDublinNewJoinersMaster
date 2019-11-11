@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.android.accenturenewjoiners.R;
+import com.github.florent37.materialviewpager.MaterialViewPager;
+import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,10 +33,11 @@ public class Locations extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_view);
         setTitle("Accenture Locations");
+
         // Item list - card view
         initializeItemList();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.card_view_recycler_list);
-
+        recyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
         // Create the grid layout manager with 1 column.
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 1);
         // Set layout manager.

@@ -1,9 +1,13 @@
 package com.example.android.accenturenewjoiners.Activities.Immigration;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.support.v4.app.Fragment;
 
@@ -33,7 +37,18 @@ public class EUFragment extends Fragment {
 
         final ListView listView = (ListView) rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                ArrayListFragments luas_sites = eu_citizen.get(position);
+                Uri siteURL = Uri.parse(luas_sites.getURL());
+                Intent intent = new Intent(Intent.ACTION_VIEW, siteURL);
+                getActivity().startActivity(intent);
+                Log.i("Test", "Test");
 
+            }
+
+        });
         return rootView;
 
     }

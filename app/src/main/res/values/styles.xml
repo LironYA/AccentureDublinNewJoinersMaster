@@ -1,13 +1,18 @@
 <resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Locations" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
     </style>
     <style name="News" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -27,9 +32,12 @@
     <style name="CardViewTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginTop">12dp</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
+        <item name="cardElevation">16dp</item>
+        <item name="cardBackgroundColor">@color/greyBG</item>
+        <item name="cardCornerRadius">8dp</item>
     </style>
 
     <!-- CardView Image theme -->
@@ -45,24 +53,24 @@
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:maxLines">3</item>
-        <item name="android:textColor">@color/accentureBlue</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:textColor">@color/cardview_dark_background</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif-thin</item>
     </style>
 
     <!-- CardView Description theme -->
     <style name="CardViewDescTheme" parent="Base.TextAppearance.AppCompat">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:maxLines">3</item>
-        <item name="android:textColor">@color/accentureBlue</item>
-        <item name="android:textSize">24sp</item>
-        <item name="fontFamily">sans-serif</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/lato</item>
     </style>
     <style name="CardViewButtonContentTheme" parent="Base.TextAppearance.AppCompat">
         <item name="android:layout_width">16dp</item>
@@ -81,4 +89,6 @@
     <item name="android:layout_marginTop">16dp</item>
     <item name="android:background">@drawable/accenture</item>
     </style>
+
+
 </resources>

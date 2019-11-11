@@ -46,19 +46,20 @@ public class WellnessMainScreen extends AppCompatActivity {
 
         wellnessTextView = (TextView) findViewById(R.id.wellnessTextView);
         final ArrayList<ListViewSelector> options = new ArrayList<>();
-        options.add(new ListViewSelector("Tel Aviv", "Center", R.drawable.accenture));
+        options.add(new ListViewSelector("Find Wellness Activity", "By Location or Building", R.drawable.accenture));
         options.add(new ListViewSelector("Eilat", "South", R.drawable.accenture));
         options.add(new ListViewSelector("Jerusalem", "Area", R.drawable.accenture));
         options.add(new ListViewSelector("Ashdod", "Area", R.drawable.accenture));
         WellnessAdapter adapter = new WellnessAdapter(this, options, R.color.accentureBlue);
         ListView listView = (ListView) findViewById(R.id.list);
+
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // if (indexOf(Selection) == 0) {
                 if (position == 0) {
-                    Intent myIntent = new Intent(WellnessMainScreen.this, WellnessVideos.class);
+                    Intent myIntent = new Intent(WellnessMainScreen.this, FindWellnessActivityDublinMenu.class);
                     WellnessMainScreen.this.startActivity(myIntent);
                 }
                 if (position == 1) {
