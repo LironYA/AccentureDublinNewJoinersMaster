@@ -1,23 +1,24 @@
 package com.example.android.accenturenewjoiners.Activities;
-
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
+
+
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.android.accenturenewjoiners.R;
-import com.github.florent37.materialviewpager.MaterialViewPager;
+import android.widget.Toast;
+
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 
 import java.util.ArrayList;
@@ -33,7 +34,16 @@ public class Locations extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_view);
         setTitle("Accenture Locations");
+        final View actionB = findViewById(R.id.action_b);
 
+
+        final FloatingActionButton actionA = (FloatingActionButton) findViewById(R.id.action_a);
+        actionA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Locations.this, "Clicked pink Floating Action Button", Toast.LENGTH_SHORT).show();
+            }
+        });
         // Item list - card view
         initializeItemList();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.card_view_recycler_list);
@@ -105,8 +115,7 @@ public class Locations extends AppCompatActivity {
 
                     }
                 }));
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 /*
         Button Button = (Button) findViewById(R.id.button);
         Button.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +127,9 @@ public class Locations extends AppCompatActivity {
             }
         });
         */
+
+
+
     }
     /* Initialise items in list. */
     private void initializeItemList() {

@@ -39,5 +39,9 @@ dependencies {
     //dependencies
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
     implementation 'com.jpardogo.materialtabstrip:library:1.1.0'
+    //floating fab
+    dependencies {
+        implementation 'com.getbase:floatingactionbutton:1.10.1'
+    }
 
 }
