@@ -41,7 +41,7 @@ public class Locations extends AppCompatActivity {
         actionA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Locations.this, "Clicked pink Floating Action Button", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Locations.this, "Clicked on the Floating Action Button", Toast.LENGTH_SHORT).show();
             }
         });
         // Item list - card view

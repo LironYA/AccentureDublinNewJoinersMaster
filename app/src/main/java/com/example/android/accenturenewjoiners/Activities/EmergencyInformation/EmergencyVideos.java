@@ -51,51 +51,39 @@ public class EmergencyVideos extends Fragment {
                 new RecyclerItemClickListener(context, recyclerView, new RecyclerItemClickListener.OnItemClickListener () {
         @Override
         public void onItemClick(View view, int position) {
+            //CPR
             if (position == 0) {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
-                        Uri.parse("https://www.google.com/maps?daddr=53.343981, -6.233636"));
+                        Uri.parse("https://www.youtube.com/watch?v=XpEvQuOWME0"));
                 startActivity(intent);
             }
+            //Asthma
             if (position == 1) {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
-                        Uri.parse("https://www.google.com/maps?daddr=53.343594, -6.239228"));
+                        Uri.parse("https://www.youtube.com/watch?v=JEnG7TH2Txk"));
                 startActivity(intent);
             }
-            //East Point
+            //Fainting
             if (position == 2) {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
-                        Uri.parse("https://www.google.com/maps?daddr=53.358356, -6.225790"));
+                        Uri.parse("https://www.youtube.com/watch?v=umQ6rJRzY3E"));
                 startActivity(intent);
             }
-            //SOBO
+            //Seizure
             if (position == 3) {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
-                        Uri.parse("https://www.google.com/maps?daddr=53.345924, -6.244830"));
+                        Uri.parse("https://www.youtube.com/watch?v=dv3agW-DZ5I"));
                 startActivity(intent);
             }
-            //Sandyford
+            //Heimlich Maneuver
             if (position == 4) {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
                         Uri.parse("https://www.google.com/maps?daddr=53.267332, -6.197447"));
-                startActivity(intent);
-            }
-            //The Academy
-            if (position == 5) {
-                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-
-                        Uri.parse("https://www.google.com/maps?daddr=53.344569, -6.250235"));
-                startActivity(intent);
-            }
-            //Grand Canal 3
-            if (position == 6) {
-                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-
-                        Uri.parse("https://www.google.com/maps?daddr=53.339275, -6.238778"));
                 startActivity(intent);
             }
         }
@@ -122,13 +110,11 @@ return rootView;
     private void initializeItemList() {
         if (itemList == null) {
             itemList = new ArrayList<RecyclerViewItem>();
-            itemList.add(new RecyclerViewItem("Accenture The Dock\n7 Hanover Quay, Grand Canal Dock, Dublin 4", R.drawable.hanoverq));
-            itemList.add(new RecyclerViewItem("Accenture Grand Canal\n 1 Grand Canal Square, Grand Canal Quay, Grand Canal Dock, Dublin 2", R.drawable.grandcanal));
-            itemList.add(new RecyclerViewItem("Accenture SOBO\n 2 Windmill Ln, Sir John Rogerson's Quay, Dublin 2", R.drawable.sobo));
-            itemList.add(new RecyclerViewItem("Accenture Eastpoint Business Park\n Alfie Byrne Rd, Dublin 3", R.drawable.eastpoint));
-            itemList.add(new RecyclerViewItem("Accenture South County Business Park (Sandyford)\n South County Business Park, Carmanhall and Leopardstown, Dublin 18", R.drawable.sandyford));
-            itemList.add(new RecyclerViewItem("Accenture The Academy\n Pearse Street, Dublin 2", R.drawable.academy));
-            itemList.add(new RecyclerViewItem("Accenture Grand Canal\n 3 Grand Canal Plaza, Grand Canal Street Upper, Dublin 4", R.drawable.plaza));
+            itemList.add(new RecyclerViewItem("Cardiopulmonary resuscitation (CPR)\nLearn how to do CPR until help arrives", R.drawable.youtube));
+            itemList.add(new RecyclerViewItem("Emergency Asthma Treatment\nWhen a person is having an asthma attack, the best treatment is to make sure that they stay calm as the attack will only last for a few minutes", R.drawable.youtube));
+            itemList.add(new RecyclerViewItem("Fainting\nFainting is a momentary episode of unconsciousness caused by a sudden drop in blood pressure. Common causes include heat, pain or distress. If you feel faint, lie down and elevate your feet", R.drawable.youtube));
+            itemList.add(new RecyclerViewItem("Recovery Position - For Seizure or Epilepsy\nStep-by-step guide to putting someone in the recovery position", R.drawable.youtube));
+            itemList.add(new RecyclerViewItem("How to Give the Heimlich Maneuver\nFirst aid procedure used to treat upper airway obstructions (or choking) by foreign objects", R.drawable.youtube));
         }
 
     }
