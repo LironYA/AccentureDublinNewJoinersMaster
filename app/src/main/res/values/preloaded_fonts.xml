@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/aclonica</item>
+        <item>@font/aladin</item>
+        <item>@font/bree_serif</item>
+        <item>@font/cantata_one</item>
+        <item>@font/enriqueta_bold</item>
+        <item>@font/fira_sans</item>
         <item>@font/lato</item>
         <item>@font/lato_thin</item>
+        <item>@font/lora</item>
         <item>@font/oswald</item>
     </array>
 </resources>
