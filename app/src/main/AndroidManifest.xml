@@ -70,6 +70,7 @@
         <activity android:name=".Activities.ThingsToSee.ThingsToSeeMain" />
         <activity android:name=".Activities.Benefits.BenefitsMain" />
         <activity android:name=".Activities.Wellness.WellnessMain" />
+        <activity android:name=".Activities.ContactUs" />
     </application>
 
 </manifest>

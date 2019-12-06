@@ -2,7 +2,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/tools">
+    android:id="@+id/cl">
 
 
     <android.support.v7.widget.RecyclerView
@@ -11,7 +11,7 @@
         android:layout_height="match_parent" />
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/multiple_actions"
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
@@ -26,7 +26,7 @@
         fab:fab_labelStyle="@style/menu_labels_style">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/action_a"
+            android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/info4"
@@ -35,7 +35,7 @@
             fab:fab_title="Page Info" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/action_b"
+            android:id="@+id/contact"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             fab:fab_colorNormal="@color/white"
@@ -44,7 +44,7 @@
             android:src="@drawable/contactfab2"
             fab:fab_title="Contact us" />
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/action_c"
+            android:id="@+id/home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             fab:fab_colorNormal="@color/white"
