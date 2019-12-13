@@ -1,9 +1,52 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    android:background="@drawable/dublincity">
+    android:id="@+id/rl_weather"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:background="@drawable/bg6">
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        fab:fab_addButtonColorNormal="@color/fab"
+        fab:fab_addButtonColorPressed="@color/white_pressed"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/refresh_fab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/refresh"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:fab_title="Refresh" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            fab:elevation="8dp"
+            android:src="@drawable/contactfab2"
+            fab:fab_title="Contact us" />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/white_pressed"
+            android:src="@drawable/home"
+            fab:fab_title="Home Screen" />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
     <TextView
         android:id="@+id/city_field"
@@ -11,30 +54,33 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/colorAccent"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/fira_sans"
         android:text="Current Weather at"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="40sp"
-        />
+        android:textColor="@color/white"
+        android:textSize="30sp" />
     <TextView
         android:id="@+id/selectCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dublin, Ireland"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/accentureBlue"
         android:layout_below="@+id/city_field"
-        android:textSize="40sp"
+        android:textSize="60sp"
+        android:fontFamily="@font/aladin"
+
         android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/updated_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/selectCity"
+        android:layout_below="@+id/humidity_field"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/accentureBlue"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="30sp" />
-
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="text"
+        android:fontFamily="@font/cantata_one"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/weather_icon"
@@ -42,9 +88,8 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="150sp" />
+        android:textColor="@color/white"
+        android:textSize="160sp" />
 
     <TextView
         android:id="@+id/details_field"
@@ -52,9 +97,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/weather_icon"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        android:textColor="@color/white"
+        android:fontFamily="@font/cantata_one"
+        android:textSize="22sp"
         />
+
     <TextView
         android:id="@+id/humidity_field"
         android:layout_width="wrap_content"
@@ -62,7 +110,10 @@
         android:layout_below="@+id/details_field"
         android:layout_centerHorizontal="true"
         android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="22sp"
+
+        android:fontFamily="@font/cantata_one"
+
         />
 
     <ProgressBar
@@ -75,12 +126,12 @@
         android:id="@+id/current_temperature_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/weather_icon"
+        android:layout_below="@id/selectCity"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-32dp"
-        android:text="Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Temp"
         android:textColor="#FFFFFF"
-        android:textSize="50sp" />
+        android:textSize="85sp" />
 
 </RelativeLayout>

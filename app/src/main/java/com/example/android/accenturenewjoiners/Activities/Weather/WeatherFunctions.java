@@ -17,7 +17,6 @@ public class WeatherFunctions {
     }
 
 
-
     public static String excuteGet(String targetURL)
     {
         URL url;
@@ -85,7 +84,5 @@ public class WeatherFunctions {
         }
         return icon;
     }
-
-
 
 }
