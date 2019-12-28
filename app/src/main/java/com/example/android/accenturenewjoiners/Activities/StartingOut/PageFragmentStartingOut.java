@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class PageFragmentStartingOut extends FragmentPagerAdapter {
     private final int PAGE_COUNT = 3;
-    private String tabs[] = new String[]{"General", "Dublin's Map", "Top Tips"};
+    private String tabs[] = new String[]{"General", "Dublin's Map", "Groceries"};
     private Context context;
 
     public PageFragmentStartingOut(FragmentManager fragmentManager, Context context) {
@@ -28,7 +28,7 @@ public class PageFragmentStartingOut extends FragmentPagerAdapter {
             return new DublinMapFragment();
         }
          else {
-            return new GeneralFragment();
+            return new RecommendationsDublinFragment();
         }
     }
 

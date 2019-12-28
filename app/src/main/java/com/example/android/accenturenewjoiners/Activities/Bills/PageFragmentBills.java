@@ -27,7 +27,7 @@ public class PageFragmentBills extends FragmentPagerAdapter {
         if (position == 1) {
             return new InternetFragment();
         } else {
-            return new ElectricityFragment();
+            return new MobilePhoneFragment();
         }
     }
 
