@@ -5,7 +5,8 @@
     tools:context=".Activities.Transportation.TransportationMainActivity"
     android:fillViewport="true"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:id="@+id/rl">
 
         <ListView
             android:id="@+id/list"

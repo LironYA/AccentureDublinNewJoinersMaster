@@ -22,9 +22,7 @@ import android.widget.GridView;
 
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.android.accenturenewjoiners.Activities.Lisbon.LisbonMainScreen;
-import com.example.android.accenturenewjoiners.Activities.Other.CircleTransform;
 import com.example.android.accenturenewjoiners.R;
 
 import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
@@ -78,7 +76,7 @@ public class MainScreen extends AppCompatActivity {
             "Health Care",
             "Emergency Information",
             "Accenture Wellness",
-            "HR Information",
+            "Euro Currency Convertor",
             "Report an Incident",
             "Benefits",
             "Relocating with Kids",
@@ -100,7 +98,7 @@ public class MainScreen extends AppCompatActivity {
             R.drawable.healthcare,
             R.drawable.emergency,
             R.drawable.wellness,
-            R.drawable.hrinfo,
+            R.drawable.currency,
             R.drawable.report,
             R.drawable.benefits,
             R.drawable.abc,

@@ -71,6 +71,7 @@
         <activity android:name=".Activities.Benefits.BenefitsMain" />
         <activity android:name=".Activities.Wellness.WellnessMain" />
         <activity android:name=".Activities.ContactUs" />
+        <activity android:name=".Activities.CurrencyConverter.CurrencyConverter" />
     </application>
 
 </manifest>

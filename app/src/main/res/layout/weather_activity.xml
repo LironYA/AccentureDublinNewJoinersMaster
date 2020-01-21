@@ -130,7 +130,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Temp"
         android:textColor="#FFFFFF"
         android:textSize="85sp" />
 

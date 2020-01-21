@@ -37,10 +37,8 @@ import java.util.List;
 
 public class Locations extends AppCompatActivity {
     private List<RecyclerViewItem> itemList = null;
-    private ImageView imageView;
     private CoordinatorLayout cLayout;
     private PopupWindow PopupWindow;
-    private TextView info_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

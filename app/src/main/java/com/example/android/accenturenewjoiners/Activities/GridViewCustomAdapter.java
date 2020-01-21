@@ -1,6 +1,7 @@
 package com.example.android.accenturenewjoiners.Activities;
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.example.android.accenturenewjoiners.Activities.Accenture.AccentureMain;
 import com.example.android.accenturenewjoiners.Activities.Benefits.BenefitsMain;
 import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
+import com.example.android.accenturenewjoiners.Activities.CurrencyConverter.CurrencyConverter;
 import com.example.android.accenturenewjoiners.Activities.EmergencyInformation.EmergencyInformationMain;
 import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
 import com.example.android.accenturenewjoiners.Activities.HealthCare.HealthCareIreland;
@@ -26,6 +28,8 @@ import com.example.android.accenturenewjoiners.Activities.Welfare.WelfareMain;
 import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMain;
 import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMainScreen;
 import com.example.android.accenturenewjoiners.R;
+import android.support.design.widget.NavigationView;
+
 
 public class GridViewCustomAdapter extends BaseAdapter {
 
@@ -40,7 +44,6 @@ public class GridViewCustomAdapter extends BaseAdapter {
         imageId=osImages;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
     }
 
     @Override
@@ -79,7 +82,6 @@ public class GridViewCustomAdapter extends BaseAdapter {
 
             @Override
             public void onClick(View v) {
-                // TODO ??Possibly change to case?? an intent will open a new activity when clicked. Maybe use extra here
                 //About Accenture
                 if(position == 0) {
                     Intent intent= new Intent(context, AccentureMain.class);
@@ -152,13 +154,17 @@ public class GridViewCustomAdapter extends BaseAdapter {
                 }
                 // HR Information
                 if(position == 13) {
-                    Intent intent= new Intent(context, News.class);
+                    Intent intent= new Intent(context, CurrencyConverter.class);
                     v.getContext().startActivity(intent);
                 }
-                //Report Incident
+                //Report an Incident
                 if(position == 14) {
-                    Intent intent= new Intent(context, News.class);
-                    v.getContext().startActivity(intent);
+                    Intent email = new Intent(Intent.ACTION_SEND);
+                    email.putExtra(Intent.EXTRA_EMAIL, new String[]{ "report@accenture.com"});
+                    email.putExtra(Intent.EXTRA_SUBJECT, "Incident report");
+                    email.putExtra(Intent.EXTRA_TEXT, "Dear team, \nI would like to report the following issue:\n");
+                    email.setType("vnd.android.cursor.item/email");
+                    v.getContext().startActivity(Intent.createChooser(email, "Please choose an Email app"));
                 }
                 //Benefits
                 if(position == 15) {
