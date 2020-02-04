@@ -22,6 +22,7 @@ import android.widget.GridView;
 
 
 import com.bumptech.glide.Glide;
+import com.example.android.accenturenewjoiners.Activities.AboutUs.AboutUsActivity;
 import com.example.android.accenturenewjoiners.Activities.Lisbon.LisbonMainScreen;
 import com.example.android.accenturenewjoiners.R;
 

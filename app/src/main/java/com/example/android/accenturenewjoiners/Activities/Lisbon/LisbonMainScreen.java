@@ -21,11 +21,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.example.android.accenturenewjoiners.Activities.AboutUsActivity;
-import com.example.android.accenturenewjoiners.Activities.Lisbon.GridViewCustomAdapterLisbon;
+import com.example.android.accenturenewjoiners.Activities.AboutUs.AboutUsActivity;
 import com.example.android.accenturenewjoiners.Activities.MainScreen;
-import com.example.android.accenturenewjoiners.Activities.Other.CircleTransform;
 import com.example.android.accenturenewjoiners.Activities.PrivacyPolicyActivity;
 import com.example.android.accenturenewjoiners.R;
 

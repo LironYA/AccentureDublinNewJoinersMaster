@@ -11,9 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.accenturenewjoiners.Activities.AboutUs.AboutUsActivity;
 import com.example.android.accenturenewjoiners.Activities.Accenture.AccentureMain;
 import com.example.android.accenturenewjoiners.Activities.Benefits.BenefitsMain;
 import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
+import com.example.android.accenturenewjoiners.Activities.ContactUs.ContactUsActivity;
 import com.example.android.accenturenewjoiners.Activities.CurrencyConverter.CurrencyConverter;
 import com.example.android.accenturenewjoiners.Activities.EmergencyInformation.EmergencyInformationMain;
 import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
@@ -188,7 +190,7 @@ public class GridViewCustomAdapter extends BaseAdapter {
                 }
                 //contact us
                 if(position == 19) {
-                    Intent intent= new Intent(context, News.class);
+                    Intent intent= new Intent(context, ContactUsActivity.class);
                     v.getContext().startActivity(intent);
                 }
                 Toast.makeText(context, "You Clicked On "+result[position], Toast.LENGTH_SHORT).show();

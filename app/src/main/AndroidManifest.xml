@@ -32,7 +32,7 @@
             android:value=".Activities.MainScreen" />
 
         <activity
-            android:name=".Activities.AboutUsActivity"
+            android:name=".Activities.AboutUs.AboutUsActivity"
             android:label="@string/title_activity_about_us"
             android:theme="@style/AppTheme" />
         <activity
@@ -72,6 +72,8 @@
         <activity android:name=".Activities.Wellness.WellnessMain" />
         <activity android:name=".Activities.ContactUs" />
         <activity android:name=".Activities.CurrencyConverter.CurrencyConverter" />
+        <activity android:name=".Activities.ContactUs.ContactUsActivity" />
+        <activity android:name=".Activities.ContactUs1" />
     </application>
 
 </manifest>

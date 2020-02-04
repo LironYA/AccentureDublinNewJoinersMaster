@@ -17,7 +17,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.android.accenturenewjoiners.Activities.ContactUs;
+import com.example.android.accenturenewjoiners.Activities.ContactUs.ContactUsActivity;
 import com.example.android.accenturenewjoiners.Activities.MainScreen;
 import com.example.android.accenturenewjoiners.Activities.Transportation.ArrayListAdapter;
 import com.example.android.accenturenewjoiners.Activities.Transportation.ArrayListFragments;
@@ -85,7 +85,7 @@ public class GeneralWelfareFragment extends Fragment {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ContactUs.class);
+                Intent intent = new Intent(getActivity(), ContactUsActivity.class);
                 startActivity(intent);
 
             }

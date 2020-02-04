@@ -27,7 +27,7 @@ import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDeco
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContactUs extends AppCompatActivity {
+public class ContactUs1 extends AppCompatActivity {
 
     private List<RecyclerViewItem> itemList = null;
     private ImageView imageView;
@@ -90,7 +90,7 @@ public class ContactUs extends AppCompatActivity {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ContactUs.this, "Clicked on the Floating Action Button", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ContactUs1.this, "Clicked on the Floating Action Button", Toast.LENGTH_SHORT).show();
             }
         });
         final FloatingActionButton home = (FloatingActionButton) findViewById(R.id.home);
@@ -180,8 +180,8 @@ public class ContactUs extends AppCompatActivity {
             itemList = new ArrayList<RecyclerViewItem>();
             itemList.add(new RecyclerViewItem("Whatsapp", R.drawable.whatsapp));
             itemList.add(new RecyclerViewItem("Slack", R.drawable.slack));
-            itemList.add(new RecyclerViewItem("Email", R.drawable.sobo));
-            itemList.add(new RecyclerViewItem("About Us", R.drawable.eastpoint));
+            itemList.add(new RecyclerViewItem("Email", R.drawable.email));
+            itemList.add(new RecyclerViewItem("About Us", R.drawable.qmark));
             itemList.add(new RecyclerViewItem("Accenture South County Business Park (Sandyford)\n South County Business Park, Carmanhall and Leopardstown, Dublin 18", R.drawable.sandyford));
             itemList.add(new RecyclerViewItem("Accenture The Academy\n Pearse Street, Dublin 2", R.drawable.academy));
             itemList.add(new RecyclerViewItem("Accenture Grand Canal\n 3 Grand Canal Plaza, Grand Canal Street Upper, Dublin 4", R.drawable.plaza));

@@ -22,7 +22,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import com.example.android.accenturenewjoiners.Activities.ContactUs;
+import com.example.android.accenturenewjoiners.Activities.ContactUs.ContactUsActivity;
 import com.example.android.accenturenewjoiners.Activities.MainScreen;
 import com.example.android.accenturenewjoiners.R;
 import com.getbase.floatingactionbutton.FloatingActionButton;
@@ -73,7 +73,7 @@ public class WeatherMain extends AppCompatActivity {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ContactUs.class);
+                Intent intent = new Intent(context, ContactUsActivity.class);
                 startActivity(intent);
 
             }
