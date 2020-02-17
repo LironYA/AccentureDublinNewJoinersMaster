@@ -1,7 +1,6 @@
 package com.example.android.accenturenewjoiners.Activities;
 import android.content.Context;
 import android.content.Intent;
-import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.accenturenewjoiners.Activities.AboutUs.AboutUsActivity;
 import com.example.android.accenturenewjoiners.Activities.Accenture.AccentureMain;
 import com.example.android.accenturenewjoiners.Activities.Benefits.BenefitsMain;
 import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
@@ -27,10 +25,8 @@ import com.example.android.accenturenewjoiners.Activities.ThingsToSee.ThingsToSe
 import com.example.android.accenturenewjoiners.Activities.Transportation.TransportationMainActivity;
 import com.example.android.accenturenewjoiners.Activities.Weather.WeatherMain;
 import com.example.android.accenturenewjoiners.Activities.Welfare.WelfareMain;
-import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMain;
 import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMainScreen;
 import com.example.android.accenturenewjoiners.R;
-import android.support.design.widget.NavigationView;
 
 
 public class GridViewCustomAdapter extends BaseAdapter {

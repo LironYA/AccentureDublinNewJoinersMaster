@@ -1,24 +1,25 @@
 package com.example.android.accenturenewjoiners.Activities.Wellness;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Gravity;
 import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.Button;
 import android.widget.TextView;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
-
-import com.example.android.accenturenewjoiners.Activities.Locations;
-import com.example.android.accenturenewjoiners.Activities.News;
-import com.example.android.accenturenewjoiners.Activities.RecyclerItemClickListener;
-import com.example.android.accenturenewjoiners.Activities.RecyclerViewDataAdapter;
-import com.example.android.accenturenewjoiners.Activities.RecyclerViewItem;
-import com.example.android.accenturenewjoiners.R;
 
 import com.example.android.accenturenewjoiners.R;
 
@@ -28,62 +29,38 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class WellnessMainScreen extends AppCompatActivity {
-    String TextFileURL = "http://25.io/toau/audio/sample.txt";
+    String TextFileURL = "http://neverinsameplace.com/accenture/login/newfile.txt";
     TextView textView;
     URL url;
     String WellnessText = "";
     String TextHolder = "", TextHolder2 = "";
     BufferedReader bufferReader;
     TextView wellnessTextView;
+    Context context;
+    Button buttonTest;
+    NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_view_wellness);
-        setTitle("Accenture Wellness");
+        setTitle("Accenture Wellness Updates");
 
         wellnessTextView = (TextView) findViewById(R.id.wellnessTextView);
-        final ArrayList<ListViewSelector> options = new ArrayList<>();
-        options.add(new ListViewSelector("Find Wellness Activity", "By Location or Building", R.drawable.accenture));
-        options.add(new ListViewSelector("Eilat", "South", R.drawable.accenture));
-        options.add(new ListViewSelector("Jerusalem", "Area", R.drawable.accenture));
-        options.add(new ListViewSelector("Ashdod", "Area", R.drawable.accenture));
-        WellnessAdapter adapter = new WellnessAdapter(this, options, R.color.accentureBlue);
-        ListView listView = (ListView) findViewById(R.id.list);
+        buttonTest = (Button) findViewById(R.id.button);
 
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // if (indexOf(Selection) == 0) {
-                if (position == 0) {
-                    Intent myIntent = new Intent(WellnessMainScreen.this, FindWellnessActivityDublinMenu.class);
-                    WellnessMainScreen.this.startActivity(myIntent);
-                }
-                if (position == 1) {
-                    Intent myIntent = new Intent(WellnessMainScreen.this, News.class);
-                    WellnessMainScreen.this.startActivity(myIntent);
-                }
-                if (position == 2) {
-                    Intent myIntent = new Intent(WellnessMainScreen.this, News.class);
-                    WellnessMainScreen.this.startActivity(myIntent);
-                }
-                if (position == 3) {
-                    Intent myIntent = new Intent(WellnessMainScreen.this, News.class);
-                    WellnessMainScreen.this.startActivity(myIntent);
-                }
-                if (position == 4) {
-                    Intent myIntent = new Intent(WellnessMainScreen.this, News.class);
-                    WellnessMainScreen.this.startActivity(myIntent);
-                }
-            }
-        });
         new GetNotePadFileFromServer().execute();
+        //Toolbar and back button
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        //notifications
     }
+
     public class GetNotePadFileFromServer extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -117,12 +94,14 @@ public class WellnessMainScreen extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void finalTextHolder) {
-            //
-            wellnessTextView.setText(TextHolder);
-            //  WellnessText = String.valueOf(getFileStreamPath(TextHolder));
-            Log.i("Wellness", WellnessText);
+            //Text View
+            wellnessTextView.setText("Accenture's Wellness updates: \n" + TextHolder);
+            wellnessTextView.setTextColor(Color.parseColor("#066e8a"));
+            wellnessTextView.setTextSize(16);
+            wellnessTextView.setGravity(Gravity.CENTER);
             super.onPostExecute(finalTextHolder);
         }
-        }}
+    }
+}
 
 

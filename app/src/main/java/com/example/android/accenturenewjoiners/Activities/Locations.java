@@ -8,12 +8,9 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-
-
 import android.view.ViewGroup;
 import android.widget.Button;
 import com.example.android.accenturenewjoiners.Activities.ContactUs.ContactUsActivity;
@@ -23,10 +20,8 @@ import android.widget.TextView;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class Locations extends AppCompatActivity {
     private List<RecyclerViewItem> itemList = null;
@@ -37,7 +32,7 @@ public class Locations extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_view);
-        setTitle("Accenture Locations");
+        setTitle("Accenture's Locations");
        // final View actionB = findViewById(R.id.action_b);
         cLayout = (CoordinatorLayout) findViewById(R.id.cl);
 

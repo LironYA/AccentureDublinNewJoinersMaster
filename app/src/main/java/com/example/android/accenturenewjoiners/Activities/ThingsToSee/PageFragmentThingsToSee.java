@@ -28,7 +28,7 @@ import com.example.android.accenturenewjoiners.Activities.Revenue.RevenueDetails
                 return new ThingsToSeeDublinFragment();
             }
             else {
-                return new ThingsToSeeDublinFragment();
+                return new OutsideDublinFragment();
             }
         }
 

@@ -148,7 +148,6 @@ public class MainActivity extends Activity {
                                   sp.edit().putBoolean("logged", true).apply();
 
                             }
-
                             sp.edit().putBoolean("countryLisbon",true).apply();
                             Intent intent = new Intent(MainActivity.this, LisbonMainScreen.class);
                             startActivity(intent);

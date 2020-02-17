@@ -22,12 +22,14 @@ public class AboutUsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
+        //Toolbar and back button
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         final ArrayList<AboutUsSelector> about = new ArrayList<>();
         about.add(new AboutUsSelector("WhatsApp", "Contact us via WhatsApp", R.drawable.whatsapp));
         about.add(new AboutUsSelector("Slack", "Contact us via Slack's App", R.drawable.slack));
-        AboutUsAdapter adapter = new AboutUsAdapter(this, about, R.color.accentureBlue);
+        AboutUsAdapter adapter = new AboutUsAdapter(this, about, R.color.transparent);
 
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);

@@ -34,46 +34,69 @@
         <activity
             android:name=".Activities.AboutUs.AboutUsActivity"
             android:label="@string/title_activity_about_us"
+            android:parentActivityName=".Activities.MainScreen"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.PrivacyPolicyActivity"
             android:label="@string/title_activity_privacy_policy"
+            android:parentActivityName=".Activities.MainScreen"
             android:theme="@style/AppTheme">
 
         </activity>
         <activity android:name=".Activities.Locations"
-
+            android:parentActivityName=".Activities.MainScreen"
             />
         <activity android:name=".Activities.News"
             android:label="News"
+            android:parentActivityName=".Activities.MainScreen"
             android:theme="@style/News"/>
-        <activity android:name=".Activities.SettingsActivity" />
-        <activity android:name=".Activities.Transportation.TransportationMainActivity" />
-        <activity android:name=".Activities.Wellness.WellnessMainScreen" />
-        <activity android:name=".Activities.StartingOut.StartingOut" />
-        <activity android:name=".Activities.FindHouse.FindHouseMain" />
-        <activity android:name=".Activities.Bills.BillsMain" />
-        <activity android:name=".Activities.Immigration.ImmigrationMain" />
-        <activity android:name=".Activities.Revenue.RevenueMain" />
-        <activity android:name=".Activities.Welfare.WelfareMain" />
-        <activity android:name=".Activities.Weather.WeatherMain" />
-        <activity android:name=".Activities.Accenture.AccentureMain" />
-        <activity android:name=".Activities.SelectCountryScreen" />
-        <activity android:name=".Activities.Lisbon.LisbonMainScreen" />
-        <activity android:name=".Activities.Lisbon.LocationsLisbon" />
-        <activity android:name=".Activities.Wellness.WellnessMainScreen" />
-        <activity android:name=".Activities.Wellness.WellnessVideos" />
-        <activity android:name=".Activities.EmergencyInformation.EmergencyInformationMain" />
-        <activity android:name=".Activities.HealthCare.HealthCareIreland" />
-        <activity android:name=".Activities.Wellness.FindWellnessActivityDublinMenu" />
-        <activity android:name=".Activities.Wellness.BlockPDublin" />
-        <activity android:name=".Activities.ThingsToSee.ThingsToSeeMain" />
-        <activity android:name=".Activities.Benefits.BenefitsMain" />
-        <activity android:name=".Activities.Wellness.WellnessMain" />
-        <activity android:name=".Activities.ContactUs" />
-        <activity android:name=".Activities.CurrencyConverter.CurrencyConverter" />
-        <activity android:name=".Activities.ContactUs.ContactUsActivity" />
-        <activity android:name=".Activities.ContactUs1" />
+        <activity android:name=".Activities.SettingsActivity"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Transportation.TransportationMainActivity"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Wellness.WellnessMainScreen"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.StartingOut.StartingOut"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.FindHouse.FindHouseMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Bills.BillsMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Immigration.ImmigrationMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Revenue.RevenueMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Welfare.WelfareMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Weather.WeatherMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Accenture.AccentureMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.SelectCountryScreen"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Lisbon.LisbonMainScreen"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Lisbon.LocationsLisbon"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Wellness.WellnessVideos"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.EmergencyInformation.EmergencyInformationMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.HealthCare.HealthCareIreland"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.ThingsToSee.ThingsToSeeMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Benefits.BenefitsMain"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.CurrencyConverter.CurrencyConverter"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.ContactUs.ContactUsActivity"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.ContactUs1"
+            android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.NotificationView"
+            android:parentActivityName=".Activities.MainScreen"/>
+
     </application>
 
 </manifest>

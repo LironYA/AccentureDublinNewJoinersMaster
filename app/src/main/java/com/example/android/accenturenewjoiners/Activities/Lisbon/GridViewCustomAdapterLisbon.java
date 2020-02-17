@@ -13,17 +13,13 @@ import android.widget.Toast;
 import com.example.android.accenturenewjoiners.Activities.Accenture.AccentureMain;
 import com.example.android.accenturenewjoiners.Activities.Bills.BillsMain;
 import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
-import com.example.android.accenturenewjoiners.Activities.Lisbon.GridViewCustomAdapterLisbon;
 import com.example.android.accenturenewjoiners.Activities.Immigration.ImmigrationMain;
-import com.example.android.accenturenewjoiners.Activities.Locations;
-import com.example.android.accenturenewjoiners.Activities.MainScreen;
 import com.example.android.accenturenewjoiners.Activities.News;
 import com.example.android.accenturenewjoiners.Activities.Revenue.RevenueMain;
 import com.example.android.accenturenewjoiners.Activities.StartingOut.StartingOut;
 import com.example.android.accenturenewjoiners.Activities.Transportation.TransportationMainActivity;
 import com.example.android.accenturenewjoiners.Activities.Weather.WeatherMain;
 import com.example.android.accenturenewjoiners.Activities.Welfare.WelfareMain;
-import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMain;
 import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMainScreen;
 import com.example.android.accenturenewjoiners.R;
 

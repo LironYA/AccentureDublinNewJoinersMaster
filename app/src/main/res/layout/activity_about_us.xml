@@ -10,8 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -32,7 +31,7 @@
             android:fontFamily="@font/lato"
             android:textStyle="bold"
             android:gravity="center"
-            android:text="Thank you for using Accenture's App! \n App created by Liron Yitshak Alkalay.\n\n Special thanks:\n For knowledge implementation and design\n to Moran Yitshak Alkalay.\n For project managment and guidance\n to Camilla Hegarty." />
+            android:text="Thank you for using Accenture's App! \n App created by Liron Yitshak Alkalay.\n Special thanks:\n Moran Yitshak Alkalay - For knowledge implementation and design.\n Camilla Hegarty - For project managment and guidance." />
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"

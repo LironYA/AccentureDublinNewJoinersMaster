@@ -104,7 +104,7 @@ public class RecommendationsDublinFragment extends Fragment {
             recommendationsDublin.add(new ArrayListFragments("https://www.lidl.ie","Lidl Ireland €", "https://seeklogo.net/wp-content/uploads/2013/03/lidl-vector-logo.png", "One of the best value grocery stores in Ireland."));
             recommendationsDublin.add(new ArrayListFragments("https://www.aldi.ie","Aldi €", "https://www.stickpng.com/assets/images/5a0c71ca9642de34b6b65ce0.png", "One of the best value grocery stores in Ireland."));
             recommendationsDublin.add(new ArrayListFragments("https://www.tesco.ie","Tesco €€", "https://www.stickpng.com/assets/images/584290c7a6515b1e0ad75ac4.png", "British multinational groceries and general merchandise retailer."));
-            recommendationsDublin.add(new ArrayListFragments("https://supervalu.ie","SuperValu €€", "https://www.stickpng.com/assets/images/5a1c2e4ff65d84088faf13d8.png", "SuperValu is a supermarket chain that operates on the island of Ireland./n Visit their website to make an online order."));
+            recommendationsDublin.add(new ArrayListFragments("https://supervalu.ie","SuperValu €€", "https://www.stickpng.com/assets/images/5a1c2e4ff65d84088faf13d8.png", "SuperValu is a supermarket chain that operates on the island of Ireland.\n Visit their website to make an online order."));
             recommendationsDublin.add(new ArrayListFragments("https://www.dunnesstores.com","Dunnes Stores €€€", "https://scotchhall.ie/wp-content/uploads/2016/06/DUNNESLOGONEW.png", "Irish multinational retail chain that primarily sells food, clothes and household wares."));
 
 

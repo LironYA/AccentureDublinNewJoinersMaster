@@ -181,7 +181,7 @@ public class ContactUs1 extends AppCompatActivity {
             itemList.add(new RecyclerViewItem("Whatsapp", R.drawable.whatsapp));
             itemList.add(new RecyclerViewItem("Slack", R.drawable.slack));
             itemList.add(new RecyclerViewItem("Email", R.drawable.email));
-            itemList.add(new RecyclerViewItem("About Us", R.drawable.qmark));
+            itemList.add(new RecyclerViewItem("About Us", R.drawable.info));
             itemList.add(new RecyclerViewItem("Accenture South County Business Park (Sandyford)\n South County Business Park, Carmanhall and Leopardstown, Dublin 18", R.drawable.sandyford));
             itemList.add(new RecyclerViewItem("Accenture The Academy\n Pearse Street, Dublin 2", R.drawable.academy));
             itemList.add(new RecyclerViewItem("Accenture Grand Canal\n 3 Grand Canal Plaza, Grand Canal Street Upper, Dublin 4", R.drawable.plaza));

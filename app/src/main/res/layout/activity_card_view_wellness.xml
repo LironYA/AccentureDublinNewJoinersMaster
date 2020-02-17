@@ -1,22 +1,28 @@
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-
-    android:fillViewport="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:background="@mipmap/greaterthan">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:orientation="vertical">
 
-    <TextView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/button"
         android:layout_gravity="center"
         android:layout_margin="15dp"
-        android:background="@drawable/rounded_corners"
+        android:gravity="center"
         android:text="Wellness Updates"
         android:textSize="22sp" />
 
@@ -24,14 +30,10 @@
         android:id="@+id/wellnessTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounder_corner_wellness"
-        android:padding="8dp"
-        android:text="Text" />
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="Wellness Updates" />
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Activities.MainScreen" />
+
 </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
