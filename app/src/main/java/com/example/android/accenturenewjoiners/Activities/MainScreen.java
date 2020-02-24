@@ -2,6 +2,7 @@ package com.example.android.accenturenewjoiners.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -22,8 +23,13 @@ import android.widget.GridView;
 
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.android.accenturenewjoiners.Activities.AboutUs.AboutUsActivity;
+import com.example.android.accenturenewjoiners.Activities.CurrencyConverter.CurrencyConverter;
 import com.example.android.accenturenewjoiners.Activities.Lisbon.LisbonMainScreen;
+import com.example.android.accenturenewjoiners.Activities.Transportation.TransportationMainActivity;
+import com.example.android.accenturenewjoiners.Activities.Weather.WeatherMain;
+import com.example.android.accenturenewjoiners.Activities.Wellness.WellnessMainScreen;
 import com.example.android.accenturenewjoiners.R;
 
 import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
@@ -41,8 +47,8 @@ public class MainScreen extends AppCompatActivity {
     SharedPreferences sp;
 
     // urls to load navigation header background image and profile image
-    private static final String urlNavHeaderBg = "https://www.accenture.com/t20190226T023011Z__w__/ie-en/_acnmedia/Accenture/Conversion-Assets/MainPages/Images/Global_26/Accenture-Electric-Purple-Logo-marquee.png";
-    private static final String urlProfileImg = "https://i.vimeocdn.com/video/724250319_780x439.jpg";
+    private static final String urlNavHeaderBg = "https://c7.uihere.com/files/210/935/810/water-blooming-color-ink.jpg";
+    private static final String urlProfileImg = "https://www.accenture.com/us-en/_acnmedia/Accenture/next-gen-6/ma-hr-analytics/Accenture-Lockup-12741.png";
 
     // index to identify current nav menu item
     public static int navItemIndex = 0;
@@ -50,9 +56,9 @@ public class MainScreen extends AppCompatActivity {
     // tags used to attach the fragments
     private static final String TAG_HOME = "home";
     private static final String TAG_PHOTOS = "photos";
-    private static final String TAG_MOVIES = "movies";
-    private static final String TAG_NOTIFICATIONS = "notifications";
-    private static final String TAG_SETTINGS = "settings";
+    private static final String TAG_TRANSPORT = "transportation";
+    private static final String TAG_NEWS = "news";
+    private static final String TAG_WELLNESS = "settings";
     public static String CURRENT_TAG = TAG_HOME;
 
     // toolbar titles respected to selected nav menu item
@@ -168,7 +174,11 @@ public class MainScreen extends AppCompatActivity {
     private void loadNavHeader() {
         // name, website
         txtName.setText("Welcome to Accenture!");
-        txtWebsite.setText("https://www.accenture.com");
+        txtName.setTextColor(Color.parseColor("#066e8a"));
+        txtName.setTextSize(11);
+        txtWebsite.setText("www.Accenture.com");
+        txtWebsite.setTextColor(Color.parseColor("#066e8a"));
+        txtWebsite.setTextSize(8);
 
         // loading header background image
         Glide.with(this).load(urlNavHeaderBg)
@@ -249,28 +259,37 @@ public class MainScreen extends AppCompatActivity {
                         break;
                     case R.id.nav_locations:
                         navItemIndex = 1;
-                        CURRENT_TAG = TAG_PHOTOS;
+                        startActivity(new Intent(MainScreen.this, Locations.class));
                         break;
-                    case R.id.nav_movies:
+                    case R.id.nav_transport:
                         navItemIndex = 2;
-                        CURRENT_TAG = TAG_MOVIES;
+                        CURRENT_TAG = TAG_TRANSPORT;
+                        startActivity(new Intent(MainScreen.this, TransportationMainActivity.class));
                         break;
-                    case R.id.nav_notifications:
+                    case R.id.nav_news:
                         navItemIndex = 3;
-                        CURRENT_TAG = TAG_NOTIFICATIONS;
+                        CURRENT_TAG = TAG_NEWS;
+                        startActivity(new Intent(MainScreen.this, News.class));
+
                         break;
-                    case R.id.nav_settings:
+                    case R.id.nav_wellness:
                         navItemIndex = 4;
-                        CURRENT_TAG = TAG_SETTINGS;
+                        CURRENT_TAG = TAG_WELLNESS;
+                        startActivity(new Intent(MainScreen.this, WellnessMainScreen.class));
                         break;
                     case R.id.nav_about_us:
                         // launch new intent
                         startActivity(new Intent(MainScreen.this, AboutUsActivity.class));
                         drawer.closeDrawers();
                         return true;
-                    case R.id.nav_privacy_policy:
+                    case R.id.currency:
                         // launch new intent
-                        startActivity(new Intent(MainScreen.this, PrivacyPolicyActivity.class));
+                        startActivity(new Intent(MainScreen.this, CurrencyConverter.class));
+                        drawer.closeDrawers();
+                        return true;
+                    case R.id.nav_current_weather:
+                        // launch new intent
+                        startActivity(new Intent(MainScreen.this, WeatherMain.class));
                         drawer.closeDrawers();
                         return true;
                     default:

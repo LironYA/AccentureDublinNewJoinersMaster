@@ -96,6 +96,7 @@
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.NotificationView"
             android:parentActivityName=".Activities.MainScreen"/>
+        <activity android:name=".Activities.Kids.KidsMain" />
 
     </application>
 

@@ -25,13 +25,13 @@
             android:layout_margin="16dp"
             android:textSize="16sp"
             android:layout_gravity="center"
-            android:textColor="@color/black"
+            android:textColor="@color/blueish"
             android:textColorHighlight="@color/black"
             android:shadowColor="@color/black_semi_transparent"
             android:fontFamily="@font/lato"
             android:textStyle="bold"
             android:gravity="center"
-            android:text="Thank you for using Accenture's App! \n App created by Liron Yitshak Alkalay.\n Special thanks:\n Moran Yitshak Alkalay - For knowledge implementation and design.\n Camilla Hegarty - For project managment and guidance." />
+            android:text="Thank you for using Accenture's App! \n App created by Liron Yitshak Alkalay.\n Special thanks:\n Moran Yitshak Alkalay - For knowledge implementation and design.\n Ovvidiu Macovei for PHP and Web wellness interface.\n Camilla Hegarty - For project managment and guidance." />
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"

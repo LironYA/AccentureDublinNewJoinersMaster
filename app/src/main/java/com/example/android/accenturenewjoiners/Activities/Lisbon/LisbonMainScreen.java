@@ -252,15 +252,15 @@ public class LisbonMainScreen extends AppCompatActivity {
                             navItemIndex = 1;
                             CURRENT_TAG = TAG_PHOTOS;
                             break;
-                        case R.id.nav_movies:
+                        case R.id.nav_transport:
                             navItemIndex = 2;
                             CURRENT_TAG = TAG_MOVIES;
                             break;
-                        case R.id.nav_notifications:
+                        case R.id.nav_news:
                             navItemIndex = 3;
                             CURRENT_TAG = TAG_NOTIFICATIONS;
                             break;
-                        case R.id.nav_settings:
+                        case R.id.nav_wellness:
                             navItemIndex = 4;
                             CURRENT_TAG = TAG_SETTINGS;
                             break;
@@ -269,7 +269,7 @@ public class LisbonMainScreen extends AppCompatActivity {
                             startActivity(new Intent(com.example.android.accenturenewjoiners.Activities.Lisbon.LisbonMainScreen.this, AboutUsActivity.class));
                             drawer.closeDrawers();
                             return true;
-                        case R.id.nav_privacy_policy:
+                        case R.id.nav_current_weather:
                             // launch new intent
                             startActivity(new Intent(com.example.android.accenturenewjoiners.Activities.Lisbon.LisbonMainScreen.this, PrivacyPolicyActivity.class));
                             drawer.closeDrawers();

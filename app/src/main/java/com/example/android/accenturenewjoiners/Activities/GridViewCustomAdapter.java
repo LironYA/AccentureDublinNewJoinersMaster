@@ -19,6 +19,7 @@ import com.example.android.accenturenewjoiners.Activities.EmergencyInformation.E
 import com.example.android.accenturenewjoiners.Activities.FindHouse.FindHouseMain;
 import com.example.android.accenturenewjoiners.Activities.HealthCare.HealthCareIreland;
 import com.example.android.accenturenewjoiners.Activities.Immigration.ImmigrationMain;
+import com.example.android.accenturenewjoiners.Activities.Kids.KidsMain;
 import com.example.android.accenturenewjoiners.Activities.Revenue.RevenueMain;
 import com.example.android.accenturenewjoiners.Activities.StartingOut.StartingOut;
 import com.example.android.accenturenewjoiners.Activities.ThingsToSee.ThingsToSeeMain;
@@ -171,7 +172,7 @@ public class GridViewCustomAdapter extends BaseAdapter {
                 }
                 //Relocating with kids
                 if(position == 16) {
-                    Intent intent= new Intent(context, WeatherMain.class);
+                    Intent intent= new Intent(context, KidsMain.class);
                     v.getContext().startActivity(intent);
                 }
                 //Things to see

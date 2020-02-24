@@ -9,9 +9,9 @@
     <!-- Navigation Drawer menu labels -->
     <string name="nav_home">Home</string>
     <string name="nav_locations">Accenture Locations</string>
-    <string name="nav_movies">Movies</string>
-    <string name="nav_notifications">Notifications</string>
-    <string name="nav_settings">Settings</string>
+    <string name="nav_transportation">Transportation</string>
+    <string name="nav_news">News</string>
+    <string name="nav_wellness">Wellness Updates</string>
     <string name="nav_about_us">About Us</string>
 
     <!-- Toolbar titles when navigation menu item is selected -->
@@ -24,11 +24,12 @@
     </string-array>
 
     <string name="activity_title_about_us">About Us</string>
-    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="activity_title_current_weather">Current Weather</string>
     <string name="action_clear_all">Clear All</string>
     <string name="change_country">Change Country</string>
     <string name="action_mark_all_read">Mark All as Read</string>
-    <string name="privacy_policy">Privacy Policy</string>
+    <string name="current_weather">Current Weather</string>
+    <string name="currency">Currency Converter</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -40,7 +40,6 @@ public class WellnessMainScreen extends AppCompatActivity {
     BufferedReader bufferReader;
     TextView wellnessTextView;
     Context context;
-    Button buttonTest;
     NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
 
     @Override
@@ -50,14 +49,12 @@ public class WellnessMainScreen extends AppCompatActivity {
         setTitle("Accenture Wellness Updates");
 
         wellnessTextView = (TextView) findViewById(R.id.wellnessTextView);
-        buttonTest = (Button) findViewById(R.id.button);
 
         new GetNotePadFileFromServer().execute();
         //Toolbar and back button
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
         //notifications
     }
 
