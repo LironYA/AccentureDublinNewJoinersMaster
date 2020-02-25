@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -70,8 +72,8 @@ public class MainActivity extends Activity {
         remember_me = (CheckBox) findViewById(R.id.remember_me);
         reset = (TextView) findViewById(R.id.reset);
 
-        if(sp.getBoolean("logged",true) && sp.getBoolean("countryDublin", false) ){
-           // if (sp.getBoolean("country", true)) {
+        //if(sp.getBoolean("logged",true) && sp.getBoolean("countryDublin", false) ){
+            if (sp.getBoolean("logged", true)) {
             Intent i = new Intent(this, MainScreen.class);
             this.startActivity(i);
         }
@@ -88,10 +90,17 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
                 //check the credentials and login data (not case sensitive) and open the main screen
 
-                if (user_name.getText().toString().equalsIgnoreCase("welcome") && password.getText().toString().equalsIgnoreCase("accenture")) {
+                if (user_name.getText().toString().trim().equalsIgnoreCase("welcome") && password.getText().toString().trim().equalsIgnoreCase("accenture")) {
                     Toast.makeText(getApplicationContext(), "Let's get started!", Toast.LENGTH_SHORT).show();
                     sp.edit().putBoolean("logged",false).apply();
-
+                    if(remember_me.isChecked()) {
+                        sp.edit().putBoolean("logged", true).apply();
+                    }
+                    Intent intent = new Intent(MainActivity.this, MainScreen.class);
+                    startActivity(intent);
+                }
+            }});
+                            /*
                            LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
                            // Inflate the custom layout/view
                            View customView = inflater.inflate(R.layout.popup_activity,null);
@@ -162,6 +171,22 @@ public class MainActivity extends Activity {
             }
 
         });
+        */
+          help.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View view) {
+                  Snackbar.make(view, "Questions? We are here to help", Snackbar.LENGTH_LONG)
+                          .setAction("Action", null).show();
+                  Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+                  emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                  emailIntent.setType("vnd.android.cursor.item/email");
+                  emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"question@accenture.com"});
+                  //TODO: Edit email and subject and content
+                  emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject");
+                  emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Content");
+                  startActivity(Intent.createChooser(emailIntent, "Please choose an Email app"));
+              }
+          });
 
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,7 +195,4 @@ public class MainActivity extends Activity {
                 password.setText(null);
             }
         });
-
-
-    }
-}
+    }}

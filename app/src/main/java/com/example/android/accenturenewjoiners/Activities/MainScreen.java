@@ -58,7 +58,7 @@ public class MainScreen extends AppCompatActivity {
     private static final String TAG_PHOTOS = "photos";
     private static final String TAG_TRANSPORT = "transportation";
     private static final String TAG_NEWS = "news";
-    private static final String TAG_WELLNESS = "settings";
+    private static final String TAG_WELLNESS = "wellness";
     public static String CURRENT_TAG = TAG_HOME;
 
     // toolbar titles respected to selected nav menu item
@@ -310,7 +310,6 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
-
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.openDrawer, R.string.closeDrawer) {
 
             @Override
@@ -355,10 +354,11 @@ public class MainScreen extends AppCompatActivity {
 
         super.onBackPressed();
     }
-
+    //Menu
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Inflate the menu; this adds items to the action bar
 
         // show menu only when home fragment is selected
         if (navItemIndex == 0) {
@@ -371,7 +371,7 @@ public class MainScreen extends AppCompatActivity {
         }
         return true;
     }
-
+    /*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -401,7 +401,7 @@ public class MainScreen extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+    */
     // show or hide the fab
     private void toggleFab() {
         if (navItemIndex == 0)
