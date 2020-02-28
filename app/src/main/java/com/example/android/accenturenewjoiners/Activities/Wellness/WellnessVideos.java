@@ -119,7 +119,6 @@ public class WellnessVideos extends AppCompatActivity {
             itemList = new ArrayList<RecyclerViewItem>();
             itemList.add(new RecyclerViewItem("Makeup wellness classes @ Accenture", R.drawable.dayofthedead));
             itemList.add(new RecyclerViewItem("Breast Cancer Awareness @ Accenture", R.drawable.grandcanal));
-            itemList.add(new RecyclerViewItem("Accenture SOBO\n 2 Windmill Ln, Sir John Rogerson's Quay, Dublin 2", R.drawable.sobo));
             itemList.add(new RecyclerViewItem("Accenture Eastpoint Business Park\n Alfie Byrne Rd, Dublin 3", R.drawable.eastpoint));
             itemList.add(new RecyclerViewItem("Accenture South County Business Park (Sandyford)\n South County Business Park, Carmanhall and Leopardstown, Dublin 18", R.drawable.sandyford));
             itemList.add(new RecyclerViewItem("Accenture The Academy\n Pearse Street, Dublin 2", R.drawable.academy));

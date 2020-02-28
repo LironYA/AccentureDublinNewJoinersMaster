@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class PageFragmentTransportation extends FragmentPagerAdapter {
     private final int PAGE_COUNT = 4;
-    private String tabs[] = new String[]{"Shuttel", "Luas", "Dart", "Bus"};
+    private String tabs[] = new String[]{"Shuttle", "Luas", "Dart", "Bus"};
     private Context context;
 
     public PageFragmentTransportation(FragmentManager fragmentManager, Context context) {

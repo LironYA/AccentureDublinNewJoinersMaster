@@ -3,8 +3,10 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aclonica</item>
         <item>@font/aladin</item>
+        <item>@font/berkshire_swash</item>
         <item>@font/bree_serif</item>
         <item>@font/cantata_one</item>
+        <item>@font/carter_one</item>
         <item>@font/enriqueta_bold</item>
         <item>@font/fira_sans</item>
         <item>@font/lato</item>

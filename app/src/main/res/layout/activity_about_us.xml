@@ -18,20 +18,19 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
+
         <TextView
             android:id="@+id/text_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textSize="16sp"
             android:layout_gravity="center"
-            android:textColor="@color/blueish"
-            android:textColorHighlight="@color/black"
-            android:shadowColor="@color/black_semi_transparent"
-            android:fontFamily="@font/lato"
-            android:textStyle="bold"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/bubblegum_sans"
             android:gravity="center"
-            android:text="Thank you for using Accenture's App! \n App created by Liron Yitshak Alkalay.\n Special thanks:\n Moran Yitshak Alkalay - For knowledge implementation and design.\n Ovvidiu Macovei for PHP and Web wellness interface.\n Camilla Hegarty - For project managment and guidance." />
+            android:shadowColor="@color/black_semi_transparent"
+            android:text="Thank you for using Accenture's App! \n App created by Liron Yitshak Alkalay.\n Special thanks:\n Moran Yitshak Alkalay - For knowledge implementation and design.\n Ovvidiu Macovei for web wellness interface.\n Ian Skuse and Jason Linnane - for your support.\n Camilla Hegarty - For project managment and guidance."
+            android:textColor="@color/black_semi_transparent"
+            android:textSize="18sp" />
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"

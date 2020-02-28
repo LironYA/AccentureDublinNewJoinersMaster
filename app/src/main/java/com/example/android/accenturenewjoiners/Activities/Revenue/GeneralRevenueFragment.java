@@ -99,10 +99,10 @@ public class GeneralRevenueFragment extends Fragment {
             }
         });
         final ArrayList<ArrayListFragments> generalRevenue = new ArrayList<ArrayListFragments>();
-        generalRevenue.add(new ArrayListFragments("https://in.accenture.com/aboutaccenture/","List of Revenue services", "https://www.revenue.ie/SiteElements/Images/revenue-Logo.png", "Full list of services provided by the revenue office."));
-        generalRevenue.add(new ArrayListFragments("https://www.revenue.ie/en/online-services/services/register-for-an-online-service/register-for-myaccount.aspx","myAccount", "https://www.revenue.ie/SiteElements/Images/revenue-Logo.png", "myAccount is a single access point for secure online services."));
+        generalRevenue.add(new ArrayListFragments("https://www.revenue.ie/en/online-services/index.aspx","List of Revenue services", "https://data.gov.ie/img/org_logos/revenue-commissioners.png", "Full list of services provided by the revenue office."));
+        generalRevenue.add(new ArrayListFragments("https://www.revenue.ie/en/online-services/services/register-for-an-online-service/register-for-myaccount.aspx","myAccount", "https://data.gov.ie/img/org_logos/revenue-commissioners.png", "myAccount is a single access point for secure online services."));
         generalRevenue.add(new ArrayListFragments("https://www.mygovid.ie/","MyGovID", "https://www.fetchcourses.ie/content/img/signin-mygovid.png", "Your single login for government services in Ireland."));
-        generalRevenue.add(new ArrayListFragments("https://www.revenue.ie/en/contact-us/index.aspx","Contact Revenue", "https://www.fetchcourses.ie/content/img/signin-mygovid.png", "Find the correct contact details for your query./n Revenue office phone: +353-17023011/n Log in to myAccount for sending online requests"));
+        generalRevenue.add(new ArrayListFragments("https://www.revenue.ie/en/contact-us/index.aspx","Contact Revenue", "https://data.gov.ie/img/org_logos/revenue-commissioners.png", "Find the correct contact details for your query.\n Revenue office phone: +353-17023011\nLog in to myAccount for sending online requests."));
         final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), generalRevenue);
 
         final ListView listView = (ListView) rootView.findViewById(R.id.list);

@@ -42,7 +42,6 @@
         android:layout_below="@id/image"
         android:layout_marginStart="-150dp"
         android:layout_marginTop="30dp"
-
         android:layout_toEndOf="@+id/textView4"
         android:ems="7"
         android:hint="€"
@@ -53,7 +52,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="30dp"
         android:textSize="28sp"
         android:layout_marginTop="30dp"
         android:textColor="@color/white"
@@ -64,16 +63,16 @@
     <Spinner
         android:id="@+id/planets_spinner"
         android:layout_width="75dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_below="@+id/editText4"
         android:layout_centerInParent="true"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="21dp"
         android:layout_marginTop="40dp"
         android:layout_toEndOf="@id/textView5"
         android:background="@drawable/spinner_bg"
-        android:backgroundTint="@color/white_pressed"
+        android:backgroundTint="@color/accentureBlue"
         android:fontFamily="@font/fira_sans"
-        android:popupBackground="@color/white_pressed"
+        android:popupBackground="@color/accentureBlue"
         android:stateListAnimator="@animator/spinner_sla"
         android:textColor="@color/white"
         android:textSize="30sp" />
@@ -93,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:layout_marginStart="35dp"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:layout_centerInParent="true"
         android:layout_below="@+id/button"
         android:textColor="@color/white" />
@@ -103,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/totalInEuro"
         android:layout_centerInParent="true"
-        android:layout_marginTop="35dp"
-        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="28sp"
         android:textColor="@color/white" />
 </RelativeLayout>

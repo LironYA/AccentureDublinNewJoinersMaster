@@ -113,47 +113,41 @@ public class Locations extends AppCompatActivity {
                             @Override
                             public void onItemClick(View view, int position) {
                                 if (position == 0) {
+                                    //The Dock
                                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
                                             Uri.parse("https://www.google.com/maps?daddr=53.343981, -6.233636"));
                                     startActivity(intent);
                                 }
+                                //Grand Canal
                                 if (position == 1) {
                                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
-                                            Uri.parse("https://www.google.com/maps?daddr=53.343594, -6.239228"));
+                                            Uri.parse("https://www.google.com/maps?daddr=53.343505, -6.239066"));
                                     startActivity(intent);
                                 }
-                                //East Point
+                                //Eastpoint
                                 if (position == 2) {
                                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-
-                                            Uri.parse("https://www.google.com/maps?daddr=53.358356, -6.225790"));
-                                    startActivity(intent);
-                                }
-                                //SOBO
-                                if (position == 3) {
-                                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-
-                                            Uri.parse("https://www.google.com/maps?daddr=53.345924, -6.244830"));
+                                            Uri.parse("https://www.google.com/maps?daddr=53.357912, -6.225300"));
                                     startActivity(intent);
                                 }
                                 //Sandyford
-                                if (position == 4) {
+                                if (position == 3) {
                                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
                                             Uri.parse("https://www.google.com/maps?daddr=53.267332, -6.197447"));
                                     startActivity(intent);
                                 }
                                 //The Academy
-                                if (position == 5) {
+                                if (position == 4) {
                                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
                                             Uri.parse("https://www.google.com/maps?daddr=53.344569, -6.250235"));
                                     startActivity(intent);
                                 }
                                 //Grand Canal 3
-                                if (position == 6) {
+                                if (position == 5) {
                                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
                                             Uri.parse("https://www.google.com/maps?daddr=53.339275, -6.238778"));
@@ -174,9 +168,8 @@ public class Locations extends AppCompatActivity {
             private void initializeItemList() {
                 if (itemList == null) {
                     itemList = new ArrayList<RecyclerViewItem>();
-                    itemList.add(new RecyclerViewItem("Accenture The Dock\n7 Hanover Quay, Grand Canal Dock, Dublin 4", R.drawable.hanoverq));
+                    itemList.add(new RecyclerViewItem("Accenture The Dock\n7 Hanover Quay, Grand Canal Dock, Dublin 4", R.drawable.thedock));
                     itemList.add(new RecyclerViewItem("Accenture Grand Canal\n 1 Grand Canal Square, Grand Canal Quay, Grand Canal Dock, Dublin 2", R.drawable.grandcanal));
-                    itemList.add(new RecyclerViewItem("Accenture SOBO\n 2 Windmill Ln, Sir John Rogerson's Quay, Dublin 2", R.drawable.sobo));
                     itemList.add(new RecyclerViewItem("Accenture Eastpoint Business Park\n Alfie Byrne Rd, Dublin 3", R.drawable.eastpoint));
                     itemList.add(new RecyclerViewItem("Accenture South County Business Park (Sandyford)\n South County Business Park, Carmanhall and Leopardstown, Dublin 18", R.drawable.sandyford));
                     itemList.add(new RecyclerViewItem("Accenture The Academy\n Pearse Street, Dublin 2", R.drawable.academy));

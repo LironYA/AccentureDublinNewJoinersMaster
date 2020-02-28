@@ -18,6 +18,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.android.accenturenewjoiners.Activities.AboutUs.AboutUsActivity;
 import com.example.android.accenturenewjoiners.Activities.AboutUs.AboutUsAdapter;
 import com.example.android.accenturenewjoiners.Activities.AboutUs.AboutUsSelector;
 import com.example.android.accenturenewjoiners.Activities.MainScreen;
@@ -26,7 +27,6 @@ import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ContactUsActivity extends AppCompatActivity {
     private RelativeLayout cLayout;
@@ -63,7 +63,7 @@ public class ContactUsActivity extends AppCompatActivity {
                     PopupWindow.setElevation(5.0f);
                 }
                 TextView info_text = (TextView) customView.findViewById(R.id.info_text);
-                info_text.setText("Find Accenture's locations across Dublin.\n Get directions from your current location.");
+                info_text.setText("Find ways to contact us, Whatsapp and Slack apps download may be required.");
                 Button closeButton = (Button) customView.findViewById(R.id.close_button_popup);
                 closeButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -103,8 +103,8 @@ public class ContactUsActivity extends AppCompatActivity {
             }
         });
         final ArrayList<AboutUsSelector> contactUs = new ArrayList<>();
-        contactUs.add(new AboutUsSelector("WhatsApp", "Contact us via WhatsApp\nWhatsApp app required", R.drawable.whatsapp));
-        contactUs.add(new AboutUsSelector("Slack", "Contact us via Slack's App\nSign in and download required", R.drawable.slack));
+        contactUs.add(new AboutUsSelector("WhatsApp", "Contact us via WhatsApp", R.drawable.whatsapp));
+        contactUs.add(new AboutUsSelector("Slack", "Contact us via Slack's App", R.drawable.slack));
         contactUs.add(new AboutUsSelector("Email (General Questions)", "Any questions? We are here to help", R.drawable.mail));
         contactUs.add(new AboutUsSelector("Email (Report an Incident)", "Report us about any incident", R.drawable.mail));
         contactUs.add(new AboutUsSelector("About Us", "Find information about the team behind the app", R.drawable.qmark));
@@ -119,9 +119,36 @@ public class ContactUsActivity extends AppCompatActivity {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://chat.whatsapp.com/E60jiZjtOZb2R8GHByJ1VZ"));
                     startActivity(intent);
                 }
+                //Slack
                 if (position == 1) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://accenture-app.slack.com"));
                     startActivity(intent);
+                }
+                //Email General
+                if (position == 2) {
+                    Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    emailIntent.setType("vnd.android.cursor.item/email");
+                    emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"korkinazor@gmail.com"});
+                    emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "General Question");
+                    emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hi,\n I have a question about ");
+                    startActivity(emailIntent);
+
+                }
+                //Email Incident
+                if (position == 3) {
+                    Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    emailIntent.setType("vnd.android.cursor.item/email");
+                    emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"korkinazor@gmail.com"});
+                    emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Incident Report");
+                    emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hi,\n I would like to report about ");
+                    startActivity(emailIntent);
+
+                }
+                //About us
+                if (position == 4) {
+                    startActivity(new Intent(ContactUsActivity.this, AboutUsActivity.class));
                 }
             }
         });

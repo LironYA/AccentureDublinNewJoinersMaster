@@ -66,7 +66,8 @@ public class CurrencyConverter extends AppCompatActivity {
                     String toCurr = toCurrency.getSelectedItem().toString();
                     double euroValue = Double.valueOf(edtEuroValue.getText().toString());
                     Integer euroValueInt = (int) Math.round(euroValue);
-                    totalInEuro.setText(euroValueInt + "€ equals to");
+
+                    totalInEuro.setText("€" + euroValueInt + " equals to");
                     try {
                         convertCurrency(toCurr, euroValue);
                     } catch (IOException e) {
@@ -148,9 +149,6 @@ public class CurrencyConverter extends AppCompatActivity {
                 .url(url)
                 .header("Content-Type", "application/json")
                 .build();
-
-
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {

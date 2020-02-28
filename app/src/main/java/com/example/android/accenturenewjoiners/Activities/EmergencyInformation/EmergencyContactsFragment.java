@@ -102,7 +102,7 @@ public class EmergencyContactsFragment extends Fragment {
             }
         });
         final ArrayList<ArrayListFragments> contacts = new ArrayList<ArrayListFragments>();
-        contacts.add(new ArrayListFragments("https://www.tripsavvy.com/emergency-phone-numbers-in-ireland-1542785","Emergency numbers", "https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_of_112_%28Georgia%29.png", "Dial 112 or 999 and ask the operator to put you through the Police (garda), Emergency Medical Services and Ambulance, Fire and Rescue Services, Marine and Coastal Emergencies or any other emergency you may have."));
+        contacts.add(new ArrayListFragments("https://www.tripsavvy.com/emergency-phone-numbers-in-ireland-1542785","Emergency numbers", "https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_of_112_%28Georgia%29.png", "Dial 112 or 999 and ask the operator to put you through to the Police (garda), Emergency Medical Services and Ambulance, Fire and Rescue Services, Marine and Coastal Emergency Services or any other emergency service you may require."));
         contacts.add(new ArrayListFragments("https://www.garda.ie/en/Contact-Us/","Contact An Garda Síochána (police)", "https://www.garda.ie/images/gardaLogoLarge.png", "Find numerous ways you can make contact with An Garda Síochána."));
         contacts.add(new ArrayListFragments("https://www.garda.ie/en/Victim-Services/Reporting-a-crime-FAQs/Is-there-an-emergency-SMS-option-.html","Emergency SMS option", "https://www.garda.ie/images/gardaLogoLarge.png", "The 112 SMS service lets deaf, hard of hearing and speech-impaired people contact the emergency services.\n Before you can use the 112 SMS service, you will need to register your mobile phone on www.112.ie."));
 

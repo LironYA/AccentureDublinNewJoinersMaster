@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MainActivity">
+        <activity android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,78 +26,106 @@
 
         <activity
             android:name=".Activities.MainScreen"
-            android:parentActivityName=".Activities.MainScreen" />
+            android:parentActivityName=".Activities.MainScreen"
+            android:screenOrientation="portrait"/>
         <!-- The meta-data tag is required if you support API level 15 and lower -->
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".Activities.MainScreen" />
+            android:value=".Activities.MainScreen"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".Activities.AboutUs.AboutUsActivity"
             android:label="@string/title_activity_about_us"
             android:parentActivityName=".Activities.MainScreen"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.PrivacyPolicyActivity"
             android:label="@string/title_activity_privacy_policy"
             android:parentActivityName=".Activities.MainScreen"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
 
         </activity>
         <activity android:name=".Activities.Locations"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"
             />
         <activity android:name=".Activities.News"
+            android:screenOrientation="portrait"
             android:label="News"
             android:parentActivityName=".Activities.MainScreen"
             android:theme="@style/News"/>
         <activity android:name=".Activities.SettingsActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Transportation.TransportationMainActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Wellness.WellnessMainScreen"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.StartingOut.StartingOut"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.FindHouse.FindHouseMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Bills.BillsMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Immigration.ImmigrationMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Revenue.RevenueMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Welfare.WelfareMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Weather.WeatherMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Accenture.AccentureMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.SelectCountryScreen"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Lisbon.LisbonMainScreen"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Lisbon.LocationsLisbon"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Wellness.WellnessVideos"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.EmergencyInformation.EmergencyInformationMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.HealthCare.HealthCareIreland"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.ThingsToSee.ThingsToSeeMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.Benefits.BenefitsMain"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.CurrencyConverter.CurrencyConverter"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.ContactUs.ContactUsActivity"
-            android:parentActivityName=".Activities.MainScreen"/>
-        <activity android:name=".Activities.ContactUs1"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
         <activity android:name=".Activities.NotificationView"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activities.MainScreen"/>
-        <activity android:name=".Activities.Kids.KidsMain" />
+        <activity android:name=".Activities.Kids.KidsMain"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activities.MainScreen"/>
 
     </application>
 

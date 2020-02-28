@@ -100,8 +100,8 @@ public class GeneralWelfareFragment extends Fragment {
         });
         final ArrayList<ArrayListFragments> generalWelfare = new ArrayList<ArrayListFragments>();
         generalWelfare.add(new ArrayListFragments("https://services.mywelfare.ie/en/topics/appointments", "PPS number appointment", "https://services.mywelfare.ie/icons/favicon-96x96.png", "Make or amend appointments for a Personal Public Service Number (PPSN)."));
-        generalWelfare.add(new ArrayListFragments("http://www.welfare.ie/en/pdf/CB1.pdf", "Child Benefit Form", "https://services.mywelfare.ie/icons/favicon-96x96.png", "You need a Personal Public Service Number (PPS No.) for yourself and your child(ren) before you apply.\nOnce done, send the application by mail to the address mentioned in the form."));
-        generalWelfare.add(new ArrayListFragments("http://www.welfare.ie/en/pdf/mb1.pdf","Maternity Benefit Form", "https://services.mywelfare.ie/icons/favicon-96x96.png", "You need a Personal Public Service Number (PPS No.) before you apply."));
+        generalWelfare.add(new ArrayListFragments("https://services.mywelfare.ie/en/topics/parents-children-family/child-benefit", "Apply Online for Child Benefit", "https://services.mywelfare.ie/icons/favicon-96x96.png", "You need a Personal Public Service Number (PPS No.) for yourself and your child(ren) before you apply.\nOnce done, send the application by mail to the address mentioned in the form."));
+        generalWelfare.add(new ArrayListFragments("https://services.mywelfare.ie/en/topics/parents-children-family/maternity-benefit/","Apply Online for Maternity Benefit", "https://services.mywelfare.ie/icons/favicon-96x96.png", "You need a Personal Public Service Number (PPS No.) before you apply."));
         generalWelfare.add(new ArrayListFragments("https://services.mywelfare.ie/en/topics/parents-children-family/paternity-benefit/","Apply Online for Paternity Benefit", "https://services.mywelfare.ie/icons/favicon-96x96.png", "You will need a MyGovID account ."));
         final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), generalWelfare);
 

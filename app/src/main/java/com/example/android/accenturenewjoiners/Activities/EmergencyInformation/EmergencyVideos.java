@@ -83,7 +83,7 @@ public class EmergencyVideos extends Fragment {
             if (position == 4) {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
 
-                        Uri.parse("https://www.google.com/maps?daddr=53.267332, -6.197447"));
+                        Uri.parse("https://www.youtube.com/watch?v=7CgtIgSyAiU&t"));
                 startActivity(intent);
             }
         }
