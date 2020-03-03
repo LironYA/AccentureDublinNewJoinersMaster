@@ -65,8 +65,7 @@ public class CurrencyConverter extends AppCompatActivity {
                 {
                     String toCurr = toCurrency.getSelectedItem().toString();
                     double euroValue = Double.valueOf(edtEuroValue.getText().toString());
-                    Integer euroValueInt = (int) Math.round(euroValue);
-
+                    int euroValueInt = (int) Math.round(euroValue);
                     totalInEuro.setText("€" + euroValueInt + " equals to");
                     try {
                         convertCurrency(toCurr, euroValue);
@@ -169,8 +168,9 @@ public class CurrencyConverter extends AppCompatActivity {
                             JSONObject  b = obj.getJSONObject("rates");
                             String val = b.getString(toCurr);
                             double output = euroValue*Double.valueOf(val);
+                            String outpurCurr = (String.format("%.2f", output));
                             String currencyValue = toCurrency.getSelectedItem().toString();
-                            equelsTo.setText(String.valueOf(output + " " + currencyValue));
+                            equelsTo.setText((outpurCurr + " " + currencyValue));
 
                         } catch (JSONException e) {
                             e.printStackTrace();

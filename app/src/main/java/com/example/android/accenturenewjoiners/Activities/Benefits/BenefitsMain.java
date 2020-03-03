@@ -24,8 +24,8 @@ public class BenefitsMain extends AppCompatActivity {
         setTitle("Accenture Wellness");
 
         final ArrayList<ArrayListFragments> benefits = new ArrayList<ArrayListFragments>();
-        benefits.add(new ArrayListFragments("https://in.accenture.com/careers/totalrewards", "Total Rewards", "pic", " Get information for your total rewards consist of cash compensation, opportunities to acquire equity and a wide range of benefits\n Log in required"));
-        benefits.add(new ArrayListFragments("https://mytotalrewards.accenture.com/Benefits", "Benefits", "pic", "Find the schemes and benefits you are entitled to\n Log in required"));
+        benefits.add(new ArrayListFragments("https://in.accenture.com/careers/totalrewards", "Total Rewards", "https://www.accenture.com/t20190226T034134Z__w__/us-en/_acnmedia/Accenture/Redesign-Assets/DotCom/Images/Global/General/3/Accenture-Strategy-Transparent-610x425.png", " Get information for your total rewards.\n Consists of cash compensation, opportunities to acquire equity and a wide range of benefits.\n Log in required."));
+        benefits.add(new ArrayListFragments("https://mytotalrewards.accenture.com/Benefits", "Benefits", "https://www.accenture.com/t20190226T034134Z__w__/us-en/_acnmedia/Accenture/Redesign-Assets/DotCom/Images/Global/General/3/Accenture-Strategy-Transparent-610x425.png", "Find the schemes and benefits you are entitled to.\n Log in required."));
 
         final ArrayListAdapter adapter = new ArrayListAdapter(this, benefits);
 
