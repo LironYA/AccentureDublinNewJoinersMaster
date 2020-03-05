@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg6"
-    tools:context=".Activities.MainScreen">
+    tools:context=".Activities.MainScreen"
+    android:id="@+id/rl">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -105,4 +106,5 @@
         android:layout_marginTop="10dp"
         android:textSize="28sp"
         android:textColor="@color/white" />
+
 </RelativeLayout>

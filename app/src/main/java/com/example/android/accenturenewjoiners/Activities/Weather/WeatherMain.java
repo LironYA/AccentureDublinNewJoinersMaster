@@ -66,7 +66,7 @@ public class WeatherMain extends AppCompatActivity {
             public void onClick(View view) {
                 Intent reload = new Intent(WeatherMain.this, WeatherMain.class);
                 startActivity(reload);
-                Toast.makeText(getApplicationContext(), "Latest weather information has been updated", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Latest weather information has been updated.", Toast.LENGTH_LONG).show();
             }
         });
         final FloatingActionButton contact = (FloatingActionButton) findViewById(R.id.contact);

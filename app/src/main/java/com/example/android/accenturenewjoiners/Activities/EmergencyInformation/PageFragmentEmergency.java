@@ -26,7 +26,7 @@ public class PageFragmentEmergency extends FragmentPagerAdapter {
             return new EmergencyContactsFragment();
         }
         else {
-            return new EmergencyVideos();
+            return new FirstAidVideosFragment();
         }
     }
 

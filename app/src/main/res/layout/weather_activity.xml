@@ -18,7 +18,7 @@
         fab:fab_addButtonColorNormal="@color/fab"
         fab:fab_addButtonColorPressed="@color/white_pressed"
         fab:fab_addButtonPlusIconColor="@color/white"
-        fab:fab_labelStyle="@style/menu_labels_style">
+        fab:fab_labelStyle="@style/menu_labels_style_white">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/refresh_fab"
@@ -97,11 +97,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/weather_icon"
         android:layout_centerHorizontal="true"
-
         android:textColor="@color/white"
         android:fontFamily="@font/cantata_one"
-        android:textSize="22sp"
-        />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/humidity_field"
@@ -111,10 +109,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
-
-        android:fontFamily="@font/cantata_one"
-
-        />
+        android:fontFamily="@font/cantata_one" />
 
     <ProgressBar
         android:id="@+id/loader"
@@ -131,6 +126,6 @@
         android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="#FFFFFF"
-        android:textSize="85sp" />
+        android:textSize="75sp" />
 
 </RelativeLayout>

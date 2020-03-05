@@ -2,6 +2,7 @@ package com.example.android.accenturenewjoiners.Activities.HealthCare;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,8 +19,10 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.example.android.accenturenewjoiners.Activities.ContactUs.ContactUsActivity;
+import com.example.android.accenturenewjoiners.Activities.MainScreen;
 import com.example.android.accenturenewjoiners.Activities.Transportation.ArrayListAdapter;
 import com.example.android.accenturenewjoiners.Activities.Transportation.ArrayListFragments;
 import com.example.android.accenturenewjoiners.R;
@@ -36,7 +39,7 @@ public class HealthCareIreland extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_list_activity);
-        setTitle("Accenture Locations");
+        setTitle("Health Care");
         rLayout = (RelativeLayout) findViewById(R.id.rl);
         final Context context = getApplicationContext();
         final FloatingActionsMenu main = (FloatingActionsMenu)findViewById(R.id.main);
@@ -91,6 +94,14 @@ public class HealthCareIreland extends AppCompatActivity {
 
             }
         });
+        final FloatingActionButton home = (FloatingActionButton) findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, MainScreen.class);
+                startActivity(intent);
+            }
+        });
         final ArrayList<ArrayListFragments> healthcare = new ArrayList<ArrayListFragments>();
         healthcare.add(new ArrayListFragments("https://en.wikipedia.org/wiki/Healthcare_in_the_Republic_of_Ireland","Healthcare in the Republic of Ireland", "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png", "Wikipedia page."));
         healthcare.add(new ArrayListFragments("https://www.vhi.ie/home","Vhi Healthcare", "https://www.vhi.ie/images/footer/vhi-logo.png", "Private health insurance."));
@@ -111,8 +122,6 @@ public class HealthCareIreland extends AppCompatActivity {
                 Uri siteURL = Uri.parse(luas_sites.getURL());
                 Intent intent = new Intent(Intent.ACTION_VIEW, siteURL);
                 getApplicationContext().getApplicationContext().startActivity(intent);
-                Log.i("Test", "Test");
-
             }
 
         });

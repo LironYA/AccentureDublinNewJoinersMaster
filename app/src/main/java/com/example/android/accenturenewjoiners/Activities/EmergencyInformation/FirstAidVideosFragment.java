@@ -1,11 +1,10 @@
 package com.example.android.accenturenewjoiners.Activities.EmergencyInformation;
 
+import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +17,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.android.accenturenewjoiners.Activities.ContactUs.ContactUsActivity;
-import com.example.android.accenturenewjoiners.Activities.ContactUs.ContactUsActivity;
 import com.example.android.accenturenewjoiners.Activities.MainScreen;
 import com.example.android.accenturenewjoiners.Activities.Transportation.ArrayListAdapter;
 import com.example.android.accenturenewjoiners.Activities.Transportation.ArrayListFragments;
@@ -30,12 +28,12 @@ import java.util.ArrayList;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
-public class EmergencyContactsFragment extends Fragment {
+public class FirstAidVideosFragment extends Fragment {
 
-    public EmergencyContactsFragment() {
+
+    public FirstAidVideosFragment() {
         // Required empty public constructor
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
@@ -62,7 +60,7 @@ public class EmergencyContactsFragment extends Fragment {
                     popupWindow.setElevation(5.0f);
                 }
                 TextView info_text = (TextView) customView.findViewById(R.id.info_text);
-                info_text.setText("Find the the ways contact the emergency services.");
+                info_text.setText("Find useful first aid videos that will help in case of an emergency.");
                 Button closeButton = (Button) customView.findViewById(R.id.close_button_popup);
                 closeButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -101,24 +99,24 @@ public class EmergencyContactsFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        final ArrayList<ArrayListFragments> contacts = new ArrayList<ArrayListFragments>();
-        contacts.add(new ArrayListFragments("https://www.tripsavvy.com/emergency-phone-numbers-in-ireland-1542785","Emergency numbers", "https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_of_112_%28Georgia%29.png", "Dial 112 or 999 and ask the operator to put you through to the Police (garda), Emergency Medical Services and Ambulance, Fire and Rescue Services, Marine and Coastal Emergency Services or any other emergency service you may require."));
-        contacts.add(new ArrayListFragments("https://www.garda.ie/en/Contact-Us/","Contact An Garda Síochána (police)", "https://www.garda.ie/images/gardaLogo.png", "Find numerous ways you can make contact with An Garda Síochána."));
-        contacts.add(new ArrayListFragments("https://www.garda.ie/en/Victim-Services/Reporting-a-crime-FAQs/Is-there-an-emergency-SMS-option-.html","Emergency SMS option", "https://www.garda.ie/images/gardaLogo.png", "The 112 SMS service lets deaf, hard of hearing and speech-impaired people contact the emergency services.\n Before you can use the 112 SMS service, you will need to register your mobile phone on www.112.ie."));
+        final ArrayList<ArrayListFragments> firstAid = new ArrayList<ArrayListFragments>();
+        firstAid.add(new ArrayListFragments("https://www.youtube.com/watch?v=XpEvQuOWME0","Cardiopulmonary resuscitation (CPR)", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/1280px-YouTube_Logo.svg.png", "Learn how to do CPR until help arrives."));
+        firstAid.add(new ArrayListFragments("https://www.youtube.com/watch?v=JEnG7TH2Txk","Emergency Asthma Treatment", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/1280px-YouTube_Logo.svg.png", "When a person is having an asthma attack, the best treatment is to make sure that they stay calm as the attack will only last for a few minutes."));
+        firstAid.add(new ArrayListFragments("https://www.youtube.com/watch?v=umQ6rJRzY3E","Fainting", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/1280px-YouTube_Logo.svg.png", "Fainting is a momentary episode of unconsciousness caused by a sudden drop in blood pressure. Common causes include heat, pain or distress. If you feel faint, lie down and elevate your feet."));
+        firstAid.add(new ArrayListFragments("https://www.youtube.com/watch?v=dv3agW-DZ5I","Recovery Position - For Seizure or Epilepsy", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/1280px-YouTube_Logo.svg.png", "Step-by-step guide to putting someone in the recovery position."));
+        firstAid.add(new ArrayListFragments("https://www.youtube.com/watch?v=7CgtIgSyAiU&t","Heimlich Maneuver", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/1280px-YouTube_Logo.svg.png", "First aid procedure used to treat upper airway obstructions (or choking) by foreign objects."));
 
-        final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), contacts);
+        final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), firstAid);
 
         final ListView listView = (ListView) rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                ArrayListFragments luas_sites = contacts.get(position);
+                ArrayListFragments luas_sites = firstAid.get(position);
                 Uri siteURL = Uri.parse(luas_sites.getURL());
                 Intent intent = new Intent(Intent.ACTION_VIEW, siteURL);
                 getActivity().startActivity(intent);
-                Log.i("Test", "Test");
-
             }
 
         });

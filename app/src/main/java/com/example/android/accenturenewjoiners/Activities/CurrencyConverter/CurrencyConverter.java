@@ -1,17 +1,29 @@
 package com.example.android.accenturenewjoiners.Activities.CurrencyConverter;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
+import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
+import com.example.android.accenturenewjoiners.Activities.ContactUs.ContactUsActivity;
+import com.example.android.accenturenewjoiners.Activities.MainScreen;
 import com.example.android.accenturenewjoiners.R;
 
 import org.json.JSONException;
@@ -24,6 +36,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -47,6 +61,7 @@ public class CurrencyConverter extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+ 
         toCurrency = (Spinner)findViewById(R.id.planets_spinner);
         final EditText edtEuroValue = (EditText)findViewById(R.id.editText4);
         final Button btnConvert = (Button)findViewById(R.id.button);

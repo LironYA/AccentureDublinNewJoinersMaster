@@ -99,7 +99,7 @@ public class RevenueDetailsFragment extends Fragment {
             }
         });
         final ArrayList<ArrayListFragments> revenueDetails = new ArrayList<ArrayListFragments>();
-        revenueDetails.add(new ArrayListFragments("https://www.ros.ie/myaccount-web/sign_in.html?execution=e1s1","Accenture's Revenue Details", "https://www.fetchcourses.ie/content/img/signin-mygovid.png", "For tax purpose, you are required to update revenue with your job details\n Log into myAccount and register Accenture’s details:\n Company name: Accenture Limited\n Employer provider's number: 6360745Q\n and your start date. It is recommended to update the information as soon as possible to avoid the emergency tax."));
+        revenueDetails.add(new ArrayListFragments("https://www.ros.ie/myaccount-web/sign_in.html?execution=e1s1","Accenture's Revenue Details", "https://www.welfare.ie/SiteCollectionImages/MyGovId.png", "For tax purpose, you are required to update revenue with your job details\n Log into myAccount and register Accenture’s details:\n Company name: Accenture Limited\n Employer provider's number: 6360745Q\n and your start date. It is recommended to update the information as soon as possible to avoid the emergency tax."));
 
         final ArrayListAdapter adapter = new ArrayListAdapter(getActivity(), revenueDetails);
 
